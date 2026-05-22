@@ -569,15 +569,17 @@
 </head>
 <body>
 
-<!-- ✅ FIX 1: MGID Sensor pixel — correct placement in body -->
+<!-- MGID Sensor pixel -->
 <script type="text/javascript">
     (function() {
         var d = document, w = window;
         w.MgSensorData = w.MgSensorData || [];
-        w.MgSensorData.push({
-            cid: 977849,
-            project: "a.mgid.com"
-        });
+        var params = new URLSearchParams(w.location.search);
+        var sensorPayload = { cid: 977849, project: "a.mgid.com" };
+        if (params.get('adclid'))    sensorPayload.adclid     = params.get('adclid');
+        if (params.get('widget_id')) sensorPayload.widget_id  = params.get('widget_id');
+        if (params.get('teaser_id')) sensorPayload.teaser_id  = params.get('teaser_id');
+        w.MgSensorData.push(sensorPayload);
         var l = "a.mgid.com";
         var n = d.getElementsByTagName("script")[0];
         var s = d.createElement("script");
@@ -755,8 +757,7 @@
       <span class="price-note">Save 50% today only</span>
     </div>
 
-    <!-- ✅ FIX 4: CTA button with class for reliable tracking -->
-    <a href="https://hop.clickbank.net/?vendor=hepatoburn&affiliate=dimka1104&lid=6100&tid=mgid" class="cta-btn hoplink" id="main-cta-btn">
+    <a href="https://hop.clickbank.net/?vendor=hepatoburn&affiliate=dimka1104&lid=6100&tid=mgid" class="cta-btn hoplink" id="main-cta-btn" target="_blank" rel="noopener">
       <span>Yes! I Want to Try HepatoBurn →</span>
     </a>
 
@@ -798,8 +799,7 @@
     <strong>HepatoBurn</strong> — 73% OFF today only<br>
     180-day money-back guarantee
   </div>
-  <!-- ✅ FIX 4: sticky button also has hoplink class -->
-  <a href="https://hop.clickbank.net/?vendor=hepatoburn&affiliate=dimka1104&lid=6100&tid=mgid" class="sticky-btn hoplink" id="sticky-cta-btn">Claim Discount →</a>
+  <a href="https://hop.clickbank.net/?vendor=hepatoburn&affiliate=dimka1104&lid=6100&tid=mgid" class="sticky-btn hoplink" id="sticky-cta-btn" target="_blank" rel="noopener">Claim Discount →</a>
 </div>
 
 <script>
@@ -844,23 +844,13 @@
   const readerCount = Math.floor(Math.random() * 2000) + 3000;
   document.getElementById('reader-count').textContent = readerCount.toLocaleString();
 
-  // ✅ FIX 5: MGID CONVERSION TRACKING — fires on ALL CTA clicks
+  // MGID CONVERSION TRACKING — fires on ALL CTA clicks
   document.querySelectorAll('.hoplink').forEach(function(btn) {
     btn.addEventListener('click', function() {
-      // Fire MGID conversion event
       try {
-        if (window.MgSensorData) {
-          window.MgSensorData.push({ event: 'purchase' });
-        }
-        // Also try direct mgid track call
-        if (typeof __mgid !== 'undefined') {
-          __mgid.track('purchase');
-        }
-      } catch(e) {
-        console.log('MGID track error:', e);
-      }
-      // Log for debugging
-      console.log('CTA clicked — MGID conversion fired');
+        window._mgq = window._mgq || [];
+        window._mgq.push(["MgSensorInvoke", "purchase"]);
+      } catch(e) {}
     });
   });
 </script>
