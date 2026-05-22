@@ -26,7 +26,6 @@
   }
 
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
   html { scroll-behavior: smooth; }
 
   body {
@@ -38,7 +37,6 @@
     -webkit-font-smoothing: antialiased;
   }
 
-  /* ── TOPBAR ── */
   .topbar {
     background: var(--ink);
     color: #e8dfc8;
@@ -50,7 +48,6 @@
   }
   .topbar span { color: var(--amber-light); font-weight: 500; }
 
-  /* ── MASTHEAD ── */
   .masthead {
     border-bottom: 3px double var(--border);
     padding: 18px 20px 14px;
@@ -91,14 +88,12 @@
   }
   .masthead-meta span::before { content: '◆ '; font-size: 8px; color: var(--amber); }
 
-  /* ── ARTICLE WRAPPER ── */
   .article {
     max-width: 740px;
     margin: 0 auto;
     padding: 0 20px 60px;
   }
 
-  /* ── HEADLINE BLOCK ── */
   .headline-block {
     padding: 40px 0 28px;
     border-bottom: 1px solid var(--border);
@@ -132,10 +127,7 @@
     letter-spacing: -.02em;
     margin-bottom: 18px;
   }
-  h1 em {
-    font-style: italic;
-    color: var(--amber);
-  }
+  h1 em { font-style: italic; color: var(--amber); }
   .deck {
     font-size: clamp(17px, 2.5vw, 21px);
     color: var(--ink-soft);
@@ -147,7 +139,6 @@
     margin-top: 6px;
   }
 
-  /* ── AUTHOR / DATE ── */
   .byline {
     display: flex;
     align-items: center;
@@ -174,7 +165,6 @@
   }
   .byline strong { color: var(--ink); font-weight: 500; }
 
-  /* ── HERO IMAGE PLACEHOLDER ── */
   .hero-img {
     margin: 28px 0;
     background: linear-gradient(160deg, #e8d5b0 0%, #c8a870 50%, #a07840 100%);
@@ -214,11 +204,7 @@
     max-width: 400px;
   }
 
-  /* ── BODY TEXT ── */
-  .article p {
-    margin-bottom: 22px;
-    color: var(--ink-soft);
-  }
+  .article p { margin-bottom: 22px; color: var(--ink-soft); }
   .article p:first-of-type::first-letter {
     font-family: 'Playfair Display', serif;
     font-size: 72px;
@@ -247,7 +233,6 @@
     margin: 30px 0 10px;
   }
 
-  /* ── PULL QUOTE ── */
   .pullquote {
     margin: 36px -20px;
     padding: 28px 36px;
@@ -286,7 +271,6 @@
     letter-spacing: .05em;
   }
 
-  /* ── STAT BOXES ── */
   .stat-row {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -317,7 +301,6 @@
     line-height: 1.4;
   }
 
-  /* ── HIGHLIGHT BOX ── */
   .highlight-box {
     background: var(--amber-pale);
     border: 1px solid rgba(200,118,10,0.25);
@@ -326,14 +309,9 @@
     margin: 28px 0;
     border-radius: 0 4px 4px 0;
   }
-  .highlight-box p {
-    margin: 0 !important;
-    color: var(--ink-soft) !important;
-    font-size: 17px;
-  }
+  .highlight-box p { margin: 0 !important; color: var(--ink-soft) !important; font-size: 17px; }
   .highlight-box p::first-letter { all: unset; }
 
-  /* ── SYMPTOMS CHECKLIST ── */
   .checklist {
     list-style: none;
     margin: 20px 0 28px;
@@ -362,7 +340,6 @@
     flex-shrink: 0;
   }
 
-  /* ── TESTIMONIALS ── */
   .testimonials { margin: 40px 0; }
   .testimonial {
     background: white;
@@ -370,20 +347,9 @@
     border-radius: 4px;
     padding: 22px 24px;
     margin-bottom: 16px;
-    position: relative;
   }
-  .testimonial-stars {
-    color: var(--amber-light);
-    font-size: 16px;
-    letter-spacing: 2px;
-    margin-bottom: 10px;
-  }
-  .testimonial p {
-    font-style: italic;
-    font-size: 16px;
-    color: var(--ink-soft);
-    margin: 0 0 12px !important;
-  }
+  .testimonial-stars { color: var(--amber-light); font-size: 16px; letter-spacing: 2px; margin-bottom: 10px; }
+  .testimonial p { font-style: italic; font-size: 16px; color: var(--ink-soft); margin: 0 0 12px !important; }
   .testimonial p::first-letter { all: unset; }
   .testimonial-author {
     font-family: 'DM Sans', sans-serif;
@@ -415,7 +381,6 @@
     font-family: 'DM Sans', sans-serif;
   }
 
-  /* ── URGENCY TICKER ── */
   .urgency-bar {
     background: var(--red-alert);
     color: white;
@@ -444,7 +409,6 @@
     50% { opacity: 0.2; }
   }
 
-  /* ── CTA SECTION ── */
   .cta-section {
     background: white;
     border: 2px solid var(--border);
@@ -485,12 +449,7 @@
     line-height: 1.2;
     margin-bottom: 12px;
   }
-  .cta-sub {
-    font-size: 16px;
-    color: var(--ink-muted);
-    margin-bottom: 28px;
-    font-style: italic;
-  }
+  .cta-sub { font-size: 16px; color: var(--ink-muted); margin-bottom: 28px; font-style: italic; }
   .cta-price-row {
     display: flex;
     align-items: center;
@@ -499,30 +458,10 @@
     margin-bottom: 24px;
     flex-wrap: wrap;
   }
-  .price-old {
-    font-family: 'DM Sans', sans-serif;
-    font-size: 20px;
-    color: var(--ink-muted);
-    text-decoration: line-through;
-  }
-  .price-new {
-    font-family: 'Playfair Display', serif;
-    font-size: 42px;
-    font-weight: 900;
-    color: var(--red-alert);
-    line-height: 1;
-  }
-  .price-note {
-    font-family: 'DM Sans', sans-serif;
-    font-size: 12px;
-    color: var(--green-trust);
-    background: #eaf7ef;
-    padding: 4px 10px;
-    border-radius: 4px;
-    font-weight: 500;
-  }
+  .price-old { font-family: 'DM Sans', sans-serif; font-size: 20px; color: var(--ink-muted); text-decoration: line-through; }
+  .price-new { font-family: 'Playfair Display', serif; font-size: 42px; font-weight: 900; color: var(--red-alert); line-height: 1; }
+  .price-note { font-family: 'DM Sans', sans-serif; font-size: 12px; color: var(--green-trust); background: #eaf7ef; padding: 4px 10px; border-radius: 4px; font-weight: 500; }
 
-  /* ── MAIN CTA BUTTON ── */
   .cta-btn {
     display: block;
     width: 100%;
@@ -550,10 +489,7 @@
     inset: 0;
     background: linear-gradient(135deg, rgba(255,255,255,0.15) 0%, transparent 60%);
   }
-  .cta-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 40px rgba(200,118,10,0.5), 0 4px 12px rgba(200,118,10,0.3);
-  }
+  .cta-btn:hover { transform: translateY(-2px); box-shadow: 0 10px 40px rgba(200,118,10,0.5), 0 4px 12px rgba(200,118,10,0.3); }
   .cta-btn:active { transform: translateY(0); }
   .cta-btn span { position: relative; z-index: 1; }
 
@@ -568,26 +504,10 @@
     flex-wrap: wrap;
     margin-top: 16px;
   }
-  .cta-micro span {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-  }
+  .cta-micro span { display: flex; align-items: center; gap: 5px; }
 
-  /* ── STOCK COUNTER ── */
-  .stock-bar {
-    margin: 20px 0 0;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 13px;
-    color: var(--ink-muted);
-  }
-  .stock-track {
-    height: 8px;
-    background: #f0ebe3;
-    border-radius: 4px;
-    margin: 8px 0 6px;
-    overflow: hidden;
-  }
+  .stock-bar { margin: 20px 0 0; font-family: 'DM Sans', sans-serif; font-size: 13px; color: var(--ink-muted); }
+  .stock-track { height: 8px; background: #f0ebe3; border-radius: 4px; margin: 8px 0 6px; overflow: hidden; }
   .stock-fill {
     height: 100%;
     width: 27%;
@@ -595,51 +515,16 @@
     border-radius: 4px;
     animation: stock-pulse 2s ease-in-out infinite;
   }
-  @keyframes stock-pulse {
-    0%, 100% { opacity: 1; }
-    50% { opacity: .8; }
-  }
+  @keyframes stock-pulse { 0%, 100% { opacity: 1; } 50% { opacity: .8; } }
   .stock-label { color: var(--red-alert); font-weight: 500; }
 
-  /* ── TRUST LOGOS ── */
-  .trust-row {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 24px;
-    margin: 32px 0;
-    flex-wrap: wrap;
-  }
-  .trust-badge {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 5px;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 11px;
-    color: var(--ink-muted);
-    text-align: center;
-    letter-spacing: .04em;
-    text-transform: uppercase;
-  }
-  .trust-icon {
-    width: 48px;
-    height: 48px;
-    border: 1.5px solid var(--border);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 22px;
-    background: white;
-  }
+  .trust-row { display: flex; align-items: center; justify-content: center; gap: 24px; margin: 32px 0; flex-wrap: wrap; }
+  .trust-badge { display: flex; flex-direction: column; align-items: center; gap: 5px; font-family: 'DM Sans', sans-serif; font-size: 11px; color: var(--ink-muted); text-align: center; letter-spacing: .04em; text-transform: uppercase; }
+  .trust-icon { width: 48px; height: 48px; border: 1.5px solid var(--border); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 22px; background: white; }
 
-  /* ── FLOATING CTA (sticky) ── */
   .sticky-cta {
     position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    bottom: 0; left: 0; right: 0;
     background: white;
     border-top: 2px solid var(--amber);
     padding: 12px 20px;
@@ -653,83 +538,21 @@
     transition: transform .3s ease;
   }
   .sticky-cta.visible { transform: translateY(0); }
-  .sticky-cta-text {
-    font-family: 'DM Sans', sans-serif;
-    font-size: 14px;
-    color: var(--ink-soft);
-    line-height: 1.3;
-  }
+  .sticky-cta-text { font-family: 'DM Sans', sans-serif; font-size: 14px; color: var(--ink-soft); line-height: 1.3; }
   .sticky-cta-text strong { color: var(--ink); font-weight: 500; }
-  .sticky-btn {
-    flex-shrink: 0;
-    padding: 12px 22px;
-    background: var(--amber);
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 14px;
-    font-weight: 500;
-    white-space: nowrap;
-    transition: background .15s;
-  }
+  .sticky-btn { flex-shrink: 0; padding: 12px 22px; background: var(--amber); color: white; text-decoration: none; border-radius: 5px; font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 500; white-space: nowrap; transition: background .15s; }
   .sticky-btn:hover { background: #b06508; }
 
-  /* ── DIVIDER ── */
-  .divider {
-    text-align: center;
-    margin: 36px 0;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    color: var(--ink-muted);
-    font-size: 13px;
-    font-family: 'DM Sans', sans-serif;
-    letter-spacing: .1em;
-    text-transform: uppercase;
-  }
-  .divider::before, .divider::after {
-    content: '';
-    flex: 1;
-    height: 1px;
-    background: var(--border);
-  }
+  .divider { text-align: center; margin: 36px 0; display: flex; align-items: center; gap: 12px; color: var(--ink-muted); font-size: 13px; font-family: 'DM Sans', sans-serif; letter-spacing: .1em; text-transform: uppercase; }
+  .divider::before, .divider::after { content: ''; flex: 1; height: 1px; background: var(--border); }
 
-  /* ── FOOTER ── */
-  footer {
-    border-top: 1px solid var(--border);
-    padding: 28px 20px;
-    text-align: center;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 12px;
-    color: var(--ink-muted);
-    line-height: 1.8;
-    max-width: 740px;
-    margin: 0 auto;
-  }
+  footer { border-top: 1px solid var(--border); padding: 28px 20px; text-align: center; font-family: 'DM Sans', sans-serif; font-size: 12px; color: var(--ink-muted); line-height: 1.8; max-width: 740px; margin: 0 auto; }
   footer a { color: var(--ink-muted); }
 
-  /* ── READING PROGRESS ── */
-  .progress-bar {
-    position: fixed;
-    top: 0; left: 0;
-    height: 3px;
-    background: linear-gradient(90deg, var(--amber), var(--amber-light));
-    z-index: 200;
-    transition: width .1s linear;
-    width: 0%;
-  }
+  .progress-bar { position: fixed; top: 0; left: 0; height: 3px; background: linear-gradient(90deg, var(--amber), var(--amber-light)); z-index: 200; transition: width .1s linear; width: 0%; }
 
-  /* ── ANIMATIONS ── */
-  .fade-in {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity .6s ease, transform .6s ease;
-  }
-  .fade-in.visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  .fade-in { opacity: 0; transform: translateY(20px); transition: opacity .6s ease, transform .6s ease; }
+  .fade-in.visible { opacity: 1; transform: translateY(0); }
 
   @media (max-width: 600px) {
     .stat-row { grid-template-columns: repeat(3, 1fr); gap: 10px; }
@@ -741,28 +564,18 @@
     .trust-row { gap: 16px; }
   }
 
-  /* ── DISCLAIMER ── */
-  .disclaimer-inline {
-    font-family: 'DM Sans', sans-serif;
-    font-size: 12px;
-    color: var(--ink-muted);
-    border-top: 1px solid var(--border);
-    padding-top: 16px;
-    margin-top: 32px;
-    line-height: 1.7;
-    font-style: italic;
-  }
+  .disclaimer-inline { font-family: 'DM Sans', sans-serif; font-size: 12px; color: var(--ink-muted); border-top: 1px solid var(--border); padding-top: 16px; margin-top: 32px; line-height: 1.7; font-style: italic; }
 </style>
 </head>
 <body>
 
-<!-- Mgid Sensor -->
+<!-- ✅ FIX 1: MGID Sensor pixel — correct placement in body -->
 <script type="text/javascript">
     (function() {
         var d = document, w = window;
         w.MgSensorData = w.MgSensorData || [];
         w.MgSensorData.push({
-            cid:977849,
+            cid: 977849,
             project: "a.mgid.com"
         });
         var l = "a.mgid.com";
@@ -770,12 +583,11 @@
         var s = d.createElement("script");
         s.type = "text/javascript";
         s.async = true;
-        var dt = !Date.now?new Date().valueOf():Date.now();
+        var dt = !Date.now ? new Date().valueOf() : Date.now();
         s.src = "https://" + l + "/mgsensor.js?d=" + dt;
         n.parentNode.insertBefore(s, n);
     })();
 </script>
-<!-- /Mgid Sensor -->
 
 <!-- Reading progress -->
 <div class="progress-bar" id="progress"></div>
@@ -785,14 +597,14 @@
   ⚠️ Limited Offer: HepatoBurn is currently <span>73% OFF</span> — Only for readers of this article
 </div>
 
-<!-- Masthead -->
+<!-- ✅ FIX 2: Masthead updated to Nova Health Post -->
 <div class="masthead">
   <div class="masthead-label">Health & Wellness Report</div>
-  <div class="masthead-name">The Daily Wellness Tribune</div>
+  <div class="masthead-name">Nova Health Post</div>
   <div class="masthead-tagline">Independent health reporting since 2009</div>
   <div class="masthead-meta">
     <span>Peer-Reviewed Sources</span>
-    <span>Updated May 2026</span>
+    <span id="pub-date">Updated Today</span>
     <span>5 min read</span>
   </div>
 </div>
@@ -800,23 +612,21 @@
 <!-- Main article -->
 <div class="article">
 
-  <!-- Headline -->
   <div class="headline-block">
     <div class="kicker">Breaking Health Report</div>
     <h1>Johns Hopkins Researchers Reveal the <em>Real Reason</em> You Can't Lose Weight — And It's Not Your Diet</h1>
     <p class="deck">A landmark study of 49,000 overweight adults found one shocking factor in common: a sluggish, toxic liver. Now a simple daily formula is helping thousands reverse it — without starving or exercising.</p>
   </div>
 
-  <!-- Byline -->
+  <!-- ✅ FIX 3: Dynamic date -->
   <div class="byline">
     <div class="byline-avatar">S</div>
     <div>
       <strong>Dr. Sarah M. Holden</strong>, Contributing Health Editor<br>
-      <span>Wednesday, May 21, 2026 &nbsp;|&nbsp; 4,812 readers today</span>
+      <span id="byline-date"></span> &nbsp;|&nbsp; <span id="reader-count"></span> readers today
     </div>
   </div>
 
-  <!-- Hero visual -->
   <div class="hero-img">
     <div class="hero-liver">🫁</div>
     <div class="hero-caption-box">
@@ -824,7 +634,6 @@
     </div>
   </div>
 
-  <!-- Article body -->
   <p>If you've tried diet after diet, counted every calorie, forced yourself through grueling workouts… and still can't shed the weight — you're not lazy. You're not weak. And it's almost certainly not your fault.</p>
 
   <p>According to a landmark new analysis published in the <em>Journal of Hepatology</em>, researchers studied over 49,000 overweight adults across 18 countries and found one single factor present in <strong>virtually every case</strong> of stubborn, unexplained weight gain:</p>
@@ -914,7 +723,6 @@
         <div class="verified-badge">✓ Verified Purchase</div>
       </div>
     </div>
-
     <div class="testimonial">
       <div class="testimonial-stars">★★★★★</div>
       <p>"My liver enzymes were elevated for years and my doctor kept telling me to 'just eat better.' After two months of HepatoBurn my last blood work came back completely normal — and I've lost 31 pounds without any major diet changes."</p>
@@ -924,7 +732,6 @@
         <div class="verified-badge">✓ Verified Purchase</div>
       </div>
     </div>
-
     <div class="testimonial">
       <div class="testimonial-stars">★★★★★</div>
       <p>"The bloating alone was worth it. I used to feel like a balloon after every meal. Within 10 days of starting HepatoBurn, that completely disappeared. The weight loss is just a bonus at this point."</p>
@@ -938,20 +745,18 @@
 
   <div class="divider">The official offer</div>
 
-  <!-- CTA Section -->
   <div class="cta-section fade-in" id="main-cta">
     <div class="cta-guarantee">✓ 180-Day Money-Back Guarantee — Zero Risk</div>
     <div class="cta-headline">Try HepatoBurn Risk-Free Today</div>
     <div class="cta-sub">Join 214,000+ people who've already restarted their metabolism</div>
-
     <div class="cta-price-row">
       <span class="price-old">$99/bottle</span>
       <span class="price-new">$49</span>
       <span class="price-note">Save 50% today only</span>
     </div>
 
-    <!-- REPLACE href WITH YOUR CLICKBANK HOPLINK -->
-    <a href="https://hop.clickbank.net/?vendor=hepatoburn&affiliate=dimka1104&lid=6100&tid=mgid" class="cta-btn" id="main-cta-btn">
+    <!-- ✅ FIX 4: CTA button with class for reliable tracking -->
+    <a href="https://hop.clickbank.net/?vendor=hepatoburn&affiliate=dimka1104&lid=6100&tid=mgid" class="cta-btn hoplink" id="main-cta-btn">
       <span>Yes! I Want to Try HepatoBurn →</span>
     </a>
 
@@ -960,7 +765,6 @@
       <span>🚚 Free US Shipping</span>
       <span>↩ 180-Day Guarantee</span>
     </div>
-
     <div class="stock-bar">
       <div>Current stock level:</div>
       <div class="stock-track"><div class="stock-fill"></div></div>
@@ -968,49 +772,34 @@
     </div>
   </div>
 
-  <!-- Trust badges -->
   <div class="trust-row fade-in">
-    <div class="trust-badge">
-      <div class="trust-icon">🏭</div>
-      FDA Registered<br>Facility
-    </div>
-    <div class="trust-badge">
-      <div class="trust-icon">🌿</div>
-      All Natural<br>Ingredients
-    </div>
-    <div class="trust-badge">
-      <div class="trust-icon">🔬</div>
-      GMP<br>Certified
-    </div>
-    <div class="trust-badge">
-      <div class="trust-icon">🇺🇸</div>
-      Made in<br>the USA
-    </div>
-    <div class="trust-badge">
-      <div class="trust-icon">↩</div>
-      180-Day<br>Guarantee
-    </div>
+    <div class="trust-badge"><div class="trust-icon">🏭</div>FDA Registered<br>Facility</div>
+    <div class="trust-badge"><div class="trust-icon">🌿</div>All Natural<br>Ingredients</div>
+    <div class="trust-badge"><div class="trust-icon">🔬</div>GMP<br>Certified</div>
+    <div class="trust-badge"><div class="trust-icon">🇺🇸</div>Made in<br>the USA</div>
+    <div class="trust-badge"><div class="trust-icon">↩</div>180-Day<br>Guarantee</div>
   </div>
 
   <div class="disclaimer-inline">
     <strong>Disclaimer:</strong> This article is sponsored editorial content. Results may vary. HepatoBurn is a dietary supplement and has not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease. The testimonials presented are from real customers but individual results will vary. Always consult your physician before starting any new dietary supplement.
   </div>
 
-</div><!-- /article -->
+</div>
 
-<!-- Footer -->
+<!-- ✅ FIX 2: Footer updated to Nova Health Post -->
 <footer>
-  © 2026 The Daily Wellness Tribune &nbsp;|&nbsp; <a href="#">Privacy Policy</a> &nbsp;|&nbsp; <a href="#">Terms of Use</a> &nbsp;|&nbsp; <a href="#">Contact</a><br>
+  © <span id="footer-year"></span> Nova Health Post &nbsp;|&nbsp; <a href="#">Privacy Policy</a> &nbsp;|&nbsp; <a href="#">Terms of Use</a> &nbsp;|&nbsp; <a href="#">Contact</a><br>
   This site is part of an affiliate marketing program. We may receive compensation when you click links and make purchases.
 </footer>
 
-<!-- Sticky CTA bar -->
+<!-- Sticky CTA -->
 <div class="sticky-cta" id="sticky-cta">
   <div class="sticky-cta-text">
     <strong>HepatoBurn</strong> — 73% OFF today only<br>
     180-day money-back guarantee
   </div>
-  <a href="https://hop.clickbank.net/?vendor=hepatoburn&affiliate=dimka1104&lid=6100&tid=mgid" class="sticky-btn" id="sticky-cta-btn">Claim Discount →</a>
+  <!-- ✅ FIX 4: sticky button also has hoplink class -->
+  <a href="https://hop.clickbank.net/?vendor=hepatoburn&affiliate=dimka1104&lid=6100&tid=mgid" class="sticky-btn hoplink" id="sticky-cta-btn">Claim Discount →</a>
 </div>
 
 <script>
@@ -1022,11 +811,10 @@
     progress.style.width = Math.min(100, (scrolled / total) * 100) + '%';
   });
 
-  // ── STICKY CTA (show after scroll past hero) ──
+  // ── STICKY CTA ──
   const stickyCta = document.getElementById('sticky-cta');
-  const triggerY = 600;
   window.addEventListener('scroll', () => {
-    if (window.scrollY > triggerY) stickyCta.classList.add('visible');
+    if (window.scrollY > 600) stickyCta.classList.add('visible');
     else stickyCta.classList.remove('visible');
   });
 
@@ -1036,7 +824,7 @@
   }, { threshold: 0.12 });
   document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
-  // ── LIVE VISITOR COUNT (simulated) ──
+  // ── LIVE VISITOR COUNT ──
   const countEl = document.getElementById('live-count');
   let baseCount = 1847;
   setInterval(() => {
@@ -1045,15 +833,34 @@
     countEl.textContent = baseCount.toLocaleString();
   }, 4000);
 
-  // ── HOPLINK SETUP ──
-  // Replace YOUR_HOPLINK_HERE in both href attributes above with your actual ClickBank hoplink
-  // Format: https://[cbid].hepatoburn.hop.clickbank.net/?tid=native_hb_may26
+  // ── DYNAMIC DATE ──
+  const now = new Date();
+  const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+  document.getElementById('byline-date').textContent = now.toLocaleDateString('en-US', options);
+  document.getElementById('pub-date').textContent = 'Updated ' + now.toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
+  document.getElementById('footer-year').textContent = now.getFullYear();
 
-  // ── CLICK TRACKING ──
-  document.querySelectorAll('a[href="https://hop.clickbank.net/?vendor=hepatoburn&affiliate=dimka1104&lid=6100&tid=mgid"]').forEach(btn => {
-    btn.addEventListener('click', () => {
-      // Add your tracking pixel or analytics event here
-      console.log('CTA clicked — track this event');
+  // ── DYNAMIC READER COUNT ──
+  const readerCount = Math.floor(Math.random() * 2000) + 3000;
+  document.getElementById('reader-count').textContent = readerCount.toLocaleString();
+
+  // ✅ FIX 5: MGID CONVERSION TRACKING — fires on ALL CTA clicks
+  document.querySelectorAll('.hoplink').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      // Fire MGID conversion event
+      try {
+        if (window.MgSensorData) {
+          window.MgSensorData.push({ event: 'purchase' });
+        }
+        // Also try direct mgid track call
+        if (typeof __mgid !== 'undefined') {
+          __mgid.track('purchase');
+        }
+      } catch(e) {
+        console.log('MGID track error:', e);
+      }
+      // Log for debugging
+      console.log('CTA clicked — MGID conversion fired');
     });
   });
 </script>
