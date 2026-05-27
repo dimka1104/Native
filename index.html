@@ -6,9 +6,8 @@
 <title>Doctors Baffled: Liver Discovery Melts Stubborn Fat in Weeks</title>
 <meta name="description" content="New research reveals the real reason most diets fail — and it has nothing to do with calories or exercise.">
 
-<!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 
 <style>
   :root {
@@ -19,7 +18,8 @@
     --amber: #c8760a;
     --amber-light: #f5a623;
     --amber-pale: #fef3e2;
-    --red-alert: #c0392b;
+    --amber-dark: #8c5007;
+    --red-alert: #b83225;
     --green-trust: #2d7a47;
     --border: rgba(26,18,8,0.12);
     --shadow: 0 2px 24px rgba(26,18,8,0.08);
@@ -37,6 +37,7 @@
     -webkit-font-smoothing: antialiased;
   }
 
+  /* ── TOP BAR ── */
   .topbar {
     background: var(--ink);
     color: #e8dfc8;
@@ -46,525 +47,506 @@
     font-size: 13px;
     letter-spacing: .04em;
   }
-  .topbar span { color: var(--amber-light); font-weight: 500; }
+  .topbar span { color: var(--amber-light); font-weight: 600; }
 
+  /* ── MASTHEAD ── */
   .masthead {
     border-bottom: 3px double var(--border);
     padding: 18px 20px 14px;
     text-align: center;
     background: var(--cream);
   }
-  .masthead-label {
-    font-family: 'DM Sans', sans-serif;
-    font-size: 11px;
-    letter-spacing: .18em;
-    text-transform: uppercase;
-    color: var(--ink-muted);
-    margin-bottom: 6px;
-  }
-  .masthead-name {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(22px, 5vw, 34px);
-    font-weight: 900;
-    color: var(--ink);
-    letter-spacing: -.01em;
-  }
-  .masthead-tagline {
-    font-size: 12px;
-    color: var(--ink-muted);
-    font-style: italic;
-    margin-top: 4px;
-    font-family: 'Source Serif 4', serif;
-  }
-  .masthead-meta {
-    display: flex;
-    justify-content: center;
-    gap: 24px;
-    margin-top: 10px;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 12px;
-    color: var(--ink-muted);
-    flex-wrap: wrap;
-  }
+  .masthead-label { font-family: 'DM Sans', sans-serif; font-size: 11px; letter-spacing: .18em; text-transform: uppercase; color: var(--ink-muted); margin-bottom: 6px; }
+  .masthead-name { font-family: 'Playfair Display', serif; font-size: clamp(22px, 5vw, 34px); font-weight: 900; color: var(--ink); letter-spacing: -.01em; }
+  .masthead-tagline { font-size: 12px; color: var(--ink-muted); font-style: italic; margin-top: 4px; font-family: 'Source Serif 4', serif; }
+  .masthead-meta { display: flex; justify-content: center; gap: 24px; margin-top: 10px; font-family: 'DM Sans', sans-serif; font-size: 12px; color: var(--ink-muted); flex-wrap: wrap; }
   .masthead-meta span::before { content: '◆ '; font-size: 8px; color: var(--amber); }
 
-  .article {
-    max-width: 740px;
-    margin: 0 auto;
-    padding: 0 20px 60px;
-  }
+  /* ── ARTICLE LAYOUT ── */
+  .article { max-width: 740px; margin: 0 auto; padding: 0 20px 60px; }
 
-  .headline-block {
-    padding: 40px 0 28px;
-    border-bottom: 1px solid var(--border);
-  }
+  .headline-block { padding: 40px 0 28px; border-bottom: 1px solid var(--border); }
   .kicker {
-    font-family: 'DM Sans', sans-serif;
-    font-size: 11px;
-    letter-spacing: .2em;
-    text-transform: uppercase;
-    color: var(--red-alert);
-    font-weight: 500;
-    margin-bottom: 14px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
+    font-family: 'DM Sans', sans-serif; font-size: 11px; letter-spacing: .2em; text-transform: uppercase;
+    color: var(--red-alert); font-weight: 600; margin-bottom: 14px; display: flex; align-items: center; gap: 8px;
   }
-  .kicker::before {
-    content: '';
-    display: inline-block;
-    width: 28px;
-    height: 2px;
-    background: var(--red-alert);
-    flex-shrink: 0;
-  }
+  .kicker::before { content: ''; display: inline-block; width: 28px; height: 2px; background: var(--red-alert); flex-shrink: 0; }
+
   h1 {
     font-family: 'Playfair Display', serif;
     font-size: clamp(28px, 6vw, 48px);
-    font-weight: 900;
-    line-height: 1.12;
-    color: var(--ink);
-    letter-spacing: -.02em;
-    margin-bottom: 18px;
+    font-weight: 900; line-height: 1.12; color: var(--ink); letter-spacing: -.02em; margin-bottom: 18px;
   }
   h1 em { font-style: italic; color: var(--amber); }
+
   .deck {
-    font-size: clamp(17px, 2.5vw, 21px);
-    color: var(--ink-soft);
-    font-weight: 300;
-    font-style: italic;
-    line-height: 1.55;
-    border-left: 3px solid var(--amber);
-    padding-left: 18px;
-    margin-top: 6px;
+    font-size: clamp(17px, 2.5vw, 21px); color: var(--ink-soft); font-weight: 300;
+    font-style: italic; line-height: 1.55; border-left: 3px solid var(--amber); padding-left: 18px; margin-top: 6px;
   }
 
   .byline {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    padding: 18px 0;
-    border-bottom: 1px solid var(--border);
-    font-family: 'DM Sans', sans-serif;
-    font-size: 13px;
-    color: var(--ink-muted);
+    display: flex; align-items: center; gap: 14px; padding: 18px 0;
+    border-bottom: 1px solid var(--border); font-family: 'DM Sans', sans-serif; font-size: 13px; color: var(--ink-muted);
   }
   .byline-avatar {
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
+    width: 44px; height: 44px; border-radius: 50%;
     background: linear-gradient(135deg, #d4b896, #b8956a);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 18px;
-    flex-shrink: 0;
-    color: white;
-    font-family: 'Playfair Display', serif;
-    font-weight: 700;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 18px; flex-shrink: 0; color: white; font-family: 'Playfair Display', serif; font-weight: 700;
   }
   .byline strong { color: var(--ink); font-weight: 500; }
 
+  /* ── HERO ── */
   .hero-img {
     margin: 28px 0;
     background: linear-gradient(160deg, #e8d5b0 0%, #c8a870 50%, #a07840 100%);
-    border-radius: 4px;
-    height: 320px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    overflow: hidden;
+    border-radius: 4px; height: 320px;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    position: relative; overflow: hidden;
   }
   .hero-img::before {
-    content: '';
-    position: absolute;
-    inset: 0;
+    content: ''; position: absolute; inset: 0;
     background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
   }
   .hero-liver {
-    font-size: 72px;
     margin-bottom: 12px;
-    filter: drop-shadow(0 4px 12px rgba(0,0,0,0.2));
+    filter: drop-shadow(0 6px 18px rgba(100,20,20,0.45));
     animation: pulse-slow 3s ease-in-out infinite;
+    display: flex; flex-direction: column; align-items: center; gap: 6px;
   }
-  @keyframes pulse-slow {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.04); }
-  }
-  .hero-caption-box {
-    background: rgba(0,0,0,0.55);
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 3px;
+  .hero-liver-label {
+    color: rgba(255,255,255,0.65);
     font-family: 'DM Sans', sans-serif;
-    font-size: 13px;
-    text-align: center;
-    max-width: 400px;
+    font-size: 10px; letter-spacing: .18em; text-transform: uppercase;
+  }
+  @keyframes pulse-slow { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.04); } }
+  .hero-caption-box {
+    background: rgba(0,0,0,0.55); color: #fff; padding: 10px 20px; border-radius: 3px;
+    font-family: 'DM Sans', sans-serif; font-size: 13px; text-align: center; max-width: 400px;
   }
 
+  /* ── BODY TEXT ── */
   .article p { margin-bottom: 22px; color: var(--ink-soft); }
   .article p:first-of-type::first-letter {
-    font-family: 'Playfair Display', serif;
-    font-size: 72px;
-    font-weight: 900;
-    float: left;
-    line-height: .8;
-    margin: 6px 10px 0 0;
-    color: var(--amber);
+    font-family: 'Playfair Display', serif; font-size: 72px; font-weight: 900;
+    float: left; line-height: .8; margin: 6px 10px 0 0; color: var(--amber);
   }
 
   h2 {
     font-family: 'Playfair Display', serif;
-    font-size: clamp(22px, 4vw, 30px);
-    font-weight: 700;
-    color: var(--ink);
-    margin: 38px 0 14px;
-    line-height: 1.25;
+    font-size: clamp(22px, 4vw, 30px); font-weight: 700; color: var(--ink);
+    margin: 44px 0 16px; line-height: 1.25; position: relative; padding-bottom: 12px;
+  }
+  h2::after {
+    content: ''; position: absolute; bottom: 0; left: 0;
+    width: 36px; height: 2px; background: var(--amber);
   }
   h3 {
-    font-family: 'DM Sans', sans-serif;
-    font-size: 15px;
-    font-weight: 500;
-    letter-spacing: .08em;
-    text-transform: uppercase;
-    color: var(--amber);
-    margin: 30px 0 10px;
+    font-family: 'DM Sans', sans-serif; font-size: 15px; font-weight: 600;
+    letter-spacing: .08em; text-transform: uppercase; color: var(--amber); margin: 30px 0 10px;
   }
 
-  .pullquote {
-    margin: 36px -20px;
-    padding: 28px 36px;
-    background: var(--ink);
-    color: #e8dfc8;
-    position: relative;
-  }
+  /* ── PULLQUOTE ── */
+  .pullquote { margin: 36px -20px; padding: 28px 36px; background: var(--ink); color: #e8dfc8; position: relative; }
   .pullquote::before {
-    content: '"';
-    font-family: 'Playfair Display', serif;
-    font-size: 120px;
-    color: var(--amber);
-    position: absolute;
-    top: -20px;
-    left: 24px;
-    line-height: 1;
-    opacity: .6;
+    content: '"'; font-family: 'Playfair Display', serif; font-size: 120px; color: var(--amber);
+    position: absolute; top: -20px; left: 24px; line-height: 1; opacity: .6;
   }
   .pullquote p {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(19px, 3vw, 26px);
-    font-style: italic;
-    font-weight: 700;
-    line-height: 1.4;
-    color: #e8dfc8 !important;
-    margin: 0 !important;
-    position: relative;
+    font-family: 'Playfair Display', serif; font-size: clamp(19px, 3vw, 26px);
+    font-style: italic; font-weight: 700; line-height: 1.4; color: #e8dfc8 !important;
+    margin: 0 !important; position: relative;
   }
   .pullquote cite {
-    display: block;
-    margin-top: 12px;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 13px;
-    color: var(--amber-light);
-    font-style: normal;
-    letter-spacing: .05em;
+    display: block; margin-top: 12px; font-family: 'DM Sans', sans-serif;
+    font-size: 13px; color: var(--amber-light); font-style: normal; letter-spacing: .05em;
   }
 
-  .stat-row {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 16px;
-    margin: 32px 0;
-  }
+  /* ── STATS ── */
+  .stat-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 32px 0; }
   .stat-box {
-    background: white;
-    border: 1px solid var(--border);
-    border-top: 3px solid var(--amber);
-    padding: 18px 14px;
-    text-align: center;
-    border-radius: 0 0 4px 4px;
+    background: white; border: 1px solid var(--border); border-top: 3px solid var(--amber);
+    padding: 18px 14px; text-align: center; border-radius: 0 0 4px 4px;
   }
-  .stat-number {
-    font-family: 'Playfair Display', serif;
-    font-size: 36px;
-    font-weight: 900;
-    color: var(--amber);
-    line-height: 1;
-    display: block;
-  }
-  .stat-desc {
-    font-family: 'DM Sans', sans-serif;
-    font-size: 12px;
-    color: var(--ink-muted);
-    margin-top: 6px;
-    line-height: 1.4;
-  }
+  .stat-number { font-family: 'Playfair Display', serif; font-size: 36px; font-weight: 900; color: var(--amber); line-height: 1; display: block; }
+  .stat-desc { font-family: 'DM Sans', sans-serif; font-size: 12px; color: var(--ink-muted); margin-top: 6px; line-height: 1.4; }
 
+  /* ── HIGHLIGHT BOX ── */
   .highlight-box {
-    background: var(--amber-pale);
-    border: 1px solid rgba(200,118,10,0.25);
-    border-left: 4px solid var(--amber);
-    padding: 20px 24px;
-    margin: 28px 0;
-    border-radius: 0 4px 4px 0;
+    background: var(--amber-pale); border: 1px solid rgba(200,118,10,0.25);
+    border-left: 4px solid var(--amber); padding: 20px 24px; margin: 28px 0; border-radius: 0 4px 4px 0;
   }
   .highlight-box p { margin: 0 !important; color: var(--ink-soft) !important; font-size: 17px; }
   .highlight-box p::first-letter { all: unset; }
 
-  .checklist {
-    list-style: none;
-    margin: 20px 0 28px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-  }
+  /* ── CHECKLIST ── */
+  .checklist { list-style: none; margin: 20px 0 28px; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
   .checklist li {
-    font-family: 'DM Sans', sans-serif;
-    font-size: 15px;
-    color: var(--ink-soft);
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
-    padding: 10px 14px;
-    background: white;
-    border: 1px solid var(--border);
-    border-radius: 4px;
+    font-family: 'DM Sans', sans-serif; font-size: 15px; color: var(--ink-soft);
+    display: flex; align-items: flex-start; gap: 10px;
+    padding: 10px 14px; background: white; border: 1px solid var(--border); border-radius: 4px;
   }
-  .checklist li::before {
-    content: '✓';
-    color: var(--green-trust);
-    font-weight: 700;
-    font-size: 14px;
-    margin-top: 1px;
-    flex-shrink: 0;
-  }
+  .checklist li::before { content: '✓'; color: var(--green-trust); font-weight: 700; font-size: 14px; margin-top: 1px; flex-shrink: 0; }
 
+  /* ── TESTIMONIALS ── */
   .testimonials { margin: 40px 0; }
   .testimonial {
-    background: white;
-    border: 1px solid var(--border);
-    border-radius: 4px;
-    padding: 22px 24px;
-    margin-bottom: 16px;
+    background: white; border: 1px solid var(--border); border-radius: 6px;
+    padding: 22px 24px; margin-bottom: 14px;
+    box-shadow: 0 1px 8px rgba(26,18,8,0.05);
   }
   .testimonial-stars { color: var(--amber-light); font-size: 16px; letter-spacing: 2px; margin-bottom: 10px; }
   .testimonial p { font-style: italic; font-size: 16px; color: var(--ink-soft); margin: 0 0 12px !important; }
   .testimonial p::first-letter { all: unset; }
-  .testimonial-author {
-    font-family: 'DM Sans', sans-serif;
-    font-size: 13px;
-    color: var(--ink-muted);
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-  .t-avatar {
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 700;
-    font-size: 14px;
-    color: white;
-    flex-shrink: 0;
-  }
-  .verified-badge {
-    margin-left: auto;
-    font-size: 11px;
-    color: var(--green-trust);
-    display: flex;
-    align-items: center;
-    gap: 4px;
-    font-family: 'DM Sans', sans-serif;
-  }
+  .testimonial-author { font-family: 'DM Sans', sans-serif; font-size: 13px; color: var(--ink-muted); display: flex; align-items: center; gap: 10px; }
+  .t-avatar { width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 14px; color: white; flex-shrink: 0; }
+  .verified-badge { margin-left: auto; font-size: 11px; color: var(--green-trust); display: flex; align-items: center; gap: 4px; font-family: 'DM Sans', sans-serif; }
 
+  /* ── URGENCY BAR ── */
   .urgency-bar {
-    background: var(--red-alert);
-    color: white;
-    padding: 12px 20px;
-    text-align: center;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 14px;
-    font-weight: 500;
-    margin: 36px -20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
+    background: var(--red-alert); color: white; padding: 12px 20px; text-align: center;
+    font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 500; margin: 36px -20px;
+    display: flex; align-items: center; justify-content: center; gap: 10px;
   }
   .urgency-bar .blink {
-    display: inline-block;
-    width: 8px;
-    height: 8px;
-    background: #ff6b6b;
-    border-radius: 50%;
-    animation: blink 1s ease-in-out infinite;
-    flex-shrink: 0;
+    display: inline-block; width: 8px; height: 8px; background: #ff8080;
+    border-radius: 50%; animation: blink 1s ease-in-out infinite; flex-shrink: 0;
   }
-  @keyframes blink {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.2; }
+  @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0.2; } }
+
+  /* ── COUNTDOWN TIMER ── */
+  .countdown-box {
+    background: linear-gradient(135deg, #2d1a06, #3d2510);
+    border-radius: 6px 6px 0 0;
+    padding: 14px 20px;
+    display: flex; align-items: center; justify-content: center; flex-wrap: wrap;
+    gap: 10px 14px;
+    font-family: 'DM Sans', sans-serif; font-size: 13px; font-weight: 500;
+    color: #c8a870;
+    letter-spacing: .03em;
+  }
+  .cd-label { display: flex; align-items: center; gap: 6px; }
+  .countdown-units { display: flex; gap: 6px; align-items: flex-start; }
+  .cd-unit-wrap { display: flex; flex-direction: column; align-items: center; gap: 3px; }
+  .cd-unit {
+    background: var(--red-alert); color: white; border-radius: 5px;
+    min-width: 42px; text-align: center; padding: 5px 8px;
+    font-size: 22px; font-weight: 700; font-family: 'DM Sans', sans-serif; line-height: 1.1;
+    letter-spacing: .02em;
+  }
+  .cd-sub { font-size: 9px; color: #9a7850; letter-spacing: .08em; text-transform: uppercase; }
+  .cd-sep { color: var(--amber); font-size: 22px; font-weight: 700; line-height: 1; padding-top: 5px; }
+
+  /* ── PACKAGE SELECTOR ── */
+  .pkg-selector {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 22px 0 20px;
+  }
+  .pkg-option {
+    border: 2px solid var(--border); border-radius: 8px; padding: 16px 10px 14px;
+    text-align: center; cursor: pointer; position: relative;
+    background: #fafaf8; transition: all .2s ease; user-select: none;
+  }
+  .pkg-option:hover { border-color: var(--amber); background: #fffcf5; transform: translateY(-2px); box-shadow: 0 4px 16px rgba(200,118,10,0.15); }
+  .pkg-option.selected {
+    border-color: var(--amber); border-width: 2px;
+    background: var(--amber-pale);
+    box-shadow: 0 4px 20px rgba(200,118,10,0.2);
+    transform: translateY(-2px);
+  }
+  .pkg-option.selected::before {
+    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+    background: var(--amber); border-radius: 6px 6px 0 0;
   }
 
-  .cta-section {
-    background: white;
-    border: 2px solid var(--border);
-    border-radius: 8px;
-    padding: 36px 32px;
-    margin: 40px 0;
-    text-align: center;
-    box-shadow: var(--shadow);
-    position: relative;
-    overflow: hidden;
+  /* Corner checkmark */
+  .pkg-check {
+    position: absolute; top: 8px; right: 8px;
+    width: 20px; height: 20px; border-radius: 50%;
+    background: var(--amber); color: white;
+    font-size: 11px; font-weight: 700;
+    display: flex; align-items: center; justify-content: center;
+    opacity: 0; transform: scale(0);
+    transition: opacity .2s, transform .2s;
+    font-family: 'DM Sans', sans-serif;
   }
-  .cta-section::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0; right: 0;
-    height: 5px;
-    background: linear-gradient(90deg, var(--amber), var(--amber-light), var(--amber));
+  .pkg-option.selected .pkg-check { opacity: 1; transform: scale(1); }
+
+  .pkg-badge {
+    position: absolute; top: -12px; left: 50%; transform: translateX(-50%);
+    background: var(--red-alert); color: white;
+    font-family: 'DM Sans', sans-serif; font-size: 9px; font-weight: 700;
+    letter-spacing: .1em; text-transform: uppercase;
+    padding: 4px 10px; border-radius: 20px; white-space: nowrap;
+    box-shadow: 0 2px 6px rgba(184,50,37,0.3);
+  }
+  .pkg-badge.gold { background: var(--amber-dark); box-shadow: 0 2px 6px rgba(140,80,7,0.35); }
+
+  .pkg-bottles {
+    font-family: 'Playfair Display', serif; font-size: 30px; font-weight: 900;
+    color: var(--amber); line-height: 1; margin-top: 4px;
+  }
+  .pkg-label { font-family: 'DM Sans', sans-serif; font-size: 12px; color: var(--ink); font-weight: 500; margin-top: 1px; }
+  .pkg-duration { font-family: 'DM Sans', sans-serif; font-size: 10px; color: var(--ink-muted); margin: 4px 0 8px; text-transform: uppercase; letter-spacing: .05em; }
+  .pkg-was { font-family: 'DM Sans', sans-serif; font-size: 11px; color: var(--ink-muted); text-decoration: line-through; margin-bottom: 2px; }
+  .pkg-price-per { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 900; color: var(--red-alert); line-height: 1; }
+  .pkg-per-label { font-family: 'DM Sans', sans-serif; font-size: 10px; color: var(--ink-muted); margin-bottom: 6px; }
+  .pkg-save-tag {
+    display: inline-block; background: #eaf7ef; color: var(--green-trust);
+    font-family: 'DM Sans', sans-serif; font-size: 10px; font-weight: 700;
+    padding: 2px 8px; border-radius: 10px;
+  }
+
+  /* ── CTA SECTION ── */
+  .cta-section {
+    background: white; border: 1px solid rgba(200,118,10,0.2);
+    border-radius: 8px; padding: 0 0 28px; margin: 40px 0;
+    text-align: center;
+    box-shadow: 0 6px 40px rgba(26,18,8,0.1), 0 1px 4px rgba(26,18,8,0.06);
+    position: relative; overflow: hidden;
+  }
+  .cta-inner { padding: 24px 28px 0; }
+  .cta-top-row {
+    display: flex; align-items: center; justify-content: center; flex-wrap: wrap;
+    gap: 10px; margin-bottom: 18px;
   }
   .cta-guarantee {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    background: #eaf7ef;
-    border: 1px solid rgba(45,122,71,0.2);
-    color: var(--green-trust);
-    font-family: 'DM Sans', sans-serif;
-    font-size: 13px;
-    font-weight: 500;
-    padding: 6px 14px;
-    border-radius: 20px;
-    margin-bottom: 20px;
+    display: inline-flex; align-items: center; gap: 6px;
+    background: #eaf7ef; border: 1px solid rgba(45,122,71,0.2); color: var(--green-trust);
+    font-family: 'DM Sans', sans-serif; font-size: 12px; font-weight: 600;
+    padding: 5px 12px; border-radius: 20px;
   }
+  .cta-rating {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: 'DM Sans', sans-serif; font-size: 12px; color: var(--ink-muted);
+  }
+  .cta-rating .stars { color: var(--amber-light); letter-spacing: 1px; }
   .cta-headline {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(22px, 4vw, 32px);
-    font-weight: 900;
-    color: var(--ink);
-    line-height: 1.2;
-    margin-bottom: 12px;
+    font-family: 'Playfair Display', serif; font-size: clamp(20px, 4vw, 28px);
+    font-weight: 900; color: var(--ink); line-height: 1.2; margin-bottom: 6px;
   }
-  .cta-sub { font-size: 16px; color: var(--ink-muted); margin-bottom: 28px; font-style: italic; }
-  .cta-price-row {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 16px;
-    margin-bottom: 24px;
-    flex-wrap: wrap;
-  }
-  .price-old { font-family: 'DM Sans', sans-serif; font-size: 20px; color: var(--ink-muted); text-decoration: line-through; }
-  .price-new { font-family: 'Playfair Display', serif; font-size: 42px; font-weight: 900; color: var(--red-alert); line-height: 1; }
-  .price-note { font-family: 'DM Sans', sans-serif; font-size: 12px; color: var(--green-trust); background: #eaf7ef; padding: 4px 10px; border-radius: 4px; font-weight: 500; }
+  .cta-sub { font-size: 15px; color: var(--ink-muted); margin-bottom: 0; font-style: italic; }
 
+  /* ── CTA BUTTON ── */
+  .cta-btn-wrap { padding: 0 20px; }
   .cta-btn {
-    display: block;
-    width: 100%;
-    max-width: 480px;
-    margin: 0 auto 16px;
-    padding: 20px 32px;
-    background: linear-gradient(135deg, #e67e00, var(--amber-light));
-    color: white;
-    text-decoration: none;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 18px;
-    font-weight: 500;
-    border-radius: 6px;
-    border: none;
-    cursor: pointer;
-    letter-spacing: .02em;
-    box-shadow: 0 6px 30px rgba(200,118,10,0.4), 0 2px 8px rgba(200,118,10,0.3);
-    transition: transform .15s, box-shadow .15s;
-    position: relative;
-    overflow: hidden;
+    display: block; width: 100%; max-width: 500px; margin: 0 auto 0;
+    padding: 22px 32px;
+    background: linear-gradient(135deg, #c86800 0%, #e89010 50%, #f5a820 100%);
+    color: white; text-decoration: none;
+    font-family: 'DM Sans', sans-serif; font-size: 19px; font-weight: 700;
+    border-radius: 8px; border: none; cursor: pointer; letter-spacing: .01em;
+    box-shadow: 0 6px 28px rgba(200,118,10,0.5), 0 2px 6px rgba(200,118,10,0.3);
+    transition: transform .15s ease, box-shadow .15s ease;
+    position: relative; overflow: hidden;
   }
+  /* Shimmer sweep */
+  .cta-btn::before {
+    content: '';
+    position: absolute; top: 0; left: -80%;
+    width: 60%; height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.28), transparent);
+    animation: shimmer-sweep 2.4s ease-in-out infinite;
+    pointer-events: none;
+  }
+  @keyframes shimmer-sweep {
+    0% { left: -80%; }
+    55%, 100% { left: 120%; }
+  }
+  /* Gloss overlay */
   .cta-btn::after {
     content: '';
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(135deg, rgba(255,255,255,0.15) 0%, transparent 60%);
+    position: absolute; inset: 0;
+    background: linear-gradient(180deg, rgba(255,255,255,0.12) 0%, transparent 60%);
+    pointer-events: none;
   }
-  .cta-btn:hover { transform: translateY(-2px); box-shadow: 0 10px 40px rgba(200,118,10,0.5), 0 4px 12px rgba(200,118,10,0.3); }
+  .cta-btn:hover { transform: translateY(-3px); box-shadow: 0 12px 40px rgba(200,118,10,0.55), 0 4px 12px rgba(200,118,10,0.35); }
   .cta-btn:active { transform: translateY(0); }
-  .cta-btn span { position: relative; z-index: 1; }
+  .cta-btn span { position: relative; z-index: 1; display: block; }
+  .cta-btn .btn-sub { font-size: 12px; font-weight: 400; opacity: .85; margin-top: 4px; }
 
   .cta-micro {
-    font-family: 'DM Sans', sans-serif;
-    font-size: 13px;
-    color: var(--ink-muted);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 16px;
-    flex-wrap: wrap;
-    margin-top: 16px;
+    font-family: 'DM Sans', sans-serif; font-size: 12px; color: var(--ink-muted);
+    display: flex; align-items: center; justify-content: center; gap: 14px; flex-wrap: wrap;
+    margin: 12px 0 0; padding: 0 20px;
   }
-  .cta-micro span { display: flex; align-items: center; gap: 5px; }
+  .cta-micro span { display: flex; align-items: center; gap: 4px; }
 
-  .stock-bar { margin: 20px 0 0; font-family: 'DM Sans', sans-serif; font-size: 13px; color: var(--ink-muted); }
-  .stock-track { height: 8px; background: #f0ebe3; border-radius: 4px; margin: 8px 0 6px; overflow: hidden; }
+  /* Stock bar */
+  .stock-bar { margin: 18px 20px 0; font-family: 'DM Sans', sans-serif; font-size: 13px; color: var(--ink-muted); }
+  .stock-track { height: 7px; background: #f0ebe3; border-radius: 4px; margin: 7px 0 5px; overflow: hidden; }
   .stock-fill {
-    height: 100%;
-    width: 27%;
-    background: linear-gradient(90deg, var(--red-alert), #e74c3c);
-    border-radius: 4px;
-    animation: stock-pulse 2s ease-in-out infinite;
+    height: 100%; width: 27%;
+    background: linear-gradient(90deg, #a02020, var(--red-alert));
+    border-radius: 4px; animation: stock-pulse 2s ease-in-out infinite;
   }
-  @keyframes stock-pulse { 0%, 100% { opacity: 1; } 50% { opacity: .8; } }
-  .stock-label { color: var(--red-alert); font-weight: 500; }
+  @keyframes stock-pulse { 0%, 100% { opacity: 1; } 50% { opacity: .75; } }
+  .stock-label { color: var(--red-alert); font-weight: 600; }
 
-  .trust-row { display: flex; align-items: center; justify-content: center; gap: 24px; margin: 32px 0; flex-wrap: wrap; }
-  .trust-badge { display: flex; flex-direction: column; align-items: center; gap: 5px; font-family: 'DM Sans', sans-serif; font-size: 11px; color: var(--ink-muted); text-align: center; letter-spacing: .04em; text-transform: uppercase; }
-  .trust-icon { width: 48px; height: 48px; border: 1.5px solid var(--border); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 22px; background: white; }
+  /* ── TRUST CHIPS ── */
+  .trust-strip {
+    display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin: 32px 0;
+  }
+  .trust-chip {
+    display: flex; align-items: center; gap: 6px;
+    font-family: 'DM Sans', sans-serif; font-size: 12px; color: var(--ink-muted);
+    background: white; border: 1px solid var(--border); border-radius: 20px;
+    padding: 7px 14px; white-space: nowrap;
+    box-shadow: 0 1px 4px rgba(26,18,8,0.05);
+  }
+  .trust-chip span { font-size: 15px; }
 
+  /* ── MID-ARTICLE CTA ── */
+  .mid-cta {
+    background: var(--ink);
+    background-image: linear-gradient(135deg, #1a1208 0%, #2d1f0a 100%);
+    border-radius: 8px; padding: 32px 28px; margin: 44px 0; text-align: center;
+    box-shadow: 0 8px 32px rgba(26,18,8,0.18);
+    position: relative; overflow: hidden;
+  }
+  .mid-cta::before {
+    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+    background: linear-gradient(90deg, var(--amber-dark), var(--amber-light), var(--amber-dark));
+  }
+  .mid-cta-label {
+    font-family: 'DM Sans', sans-serif; font-size: 10px; font-weight: 600;
+    letter-spacing: .18em; text-transform: uppercase; color: var(--amber-light);
+    margin-bottom: 10px;
+  }
+  .mid-cta-headline {
+    font-family: 'Playfair Display', serif; font-size: clamp(18px, 3.5vw, 24px);
+    font-weight: 900; color: #f0e6d2; margin-bottom: 8px; line-height: 1.3;
+  }
+  .mid-cta-sub {
+    font-family: 'DM Sans', sans-serif; font-size: 14px; color: #a08060;
+    margin-bottom: 22px; font-style: italic;
+  }
+  .mid-cta-btn {
+    display: inline-block; padding: 16px 36px;
+    background: linear-gradient(135deg, #c86800, #f0a020);
+    color: white; text-decoration: none;
+    font-family: 'DM Sans', sans-serif; font-size: 16px; font-weight: 700;
+    border-radius: 7px; box-shadow: 0 6px 24px rgba(200,118,10,0.45);
+    transition: transform .15s, box-shadow .15s;
+    position: relative; overflow: hidden;
+  }
+  .mid-cta-btn::before {
+    content: ''; position: absolute; top: 0; left: -80%; width: 60%; height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.22), transparent);
+    animation: shimmer-sweep 2.4s ease-in-out infinite;
+  }
+  .mid-cta-btn:hover { transform: translateY(-2px); box-shadow: 0 10px 32px rgba(200,118,10,0.55); }
+  .mid-cta-note { font-family: 'DM Sans', sans-serif; font-size: 12px; color: #7a6040; margin-top: 12px; }
+
+  /* ── FAQ SECTION ── */
+  .faq-section { margin: 40px 0; }
+  .faq-item {
+    border: 1px solid var(--border); border-radius: 6px;
+    margin-bottom: 8px; overflow: hidden; background: white;
+    transition: border-color .2s;
+  }
+  .faq-item.open {
+    border-color: rgba(200,118,10,0.4);
+    border-left: 3px solid var(--amber);
+    box-shadow: 0 2px 12px rgba(200,118,10,0.1);
+  }
+  .faq-q {
+    width: 100%; text-align: left; padding: 16px 18px; background: none; border: none;
+    cursor: pointer; font-family: 'DM Sans', sans-serif; font-size: 15px; font-weight: 500;
+    color: var(--ink); display: flex; justify-content: space-between; align-items: center; gap: 12px;
+    transition: color .2s, background .2s;
+  }
+  .faq-q:hover { background: #fdfaf5; }
+  .faq-item.open .faq-q { color: var(--amber); background: #fffcf5; }
+  .faq-chevron {
+    flex-shrink: 0; transition: transform .25s; color: var(--amber);
+    font-size: 16px; line-height: 1;
+  }
+  .faq-item.open .faq-chevron { transform: rotate(180deg); }
+  .faq-a {
+    padding: 0 18px; max-height: 0; overflow: hidden;
+    transition: max-height .35s ease, padding .3s ease;
+    font-family: 'DM Sans', sans-serif; font-size: 14px; color: var(--ink-soft); line-height: 1.7;
+  }
+  .faq-item.open .faq-a { max-height: 300px; padding: 0 18px 18px; }
+
+  /* ── STICKY CTA ── */
   .sticky-cta {
-    position: fixed;
-    bottom: 0; left: 0; right: 0;
-    background: white;
-    border-top: 2px solid var(--amber);
-    padding: 12px 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 12px;
-    z-index: 100;
-    box-shadow: 0 -4px 20px rgba(0,0,0,0.1);
-    transform: translateY(100%);
-    transition: transform .3s ease;
+    position: fixed; bottom: 0; left: 0; right: 0;
+    background: white; border-top: 2px solid var(--amber);
+    padding: 10px 20px;
+    display: flex; align-items: center; justify-content: space-between; gap: 12px;
+    z-index: 100; box-shadow: 0 -4px 24px rgba(0,0,0,0.1);
+    transform: translateY(100%); transition: transform .3s ease;
   }
   .sticky-cta.visible { transform: translateY(0); }
-  .sticky-cta-text { font-family: 'DM Sans', sans-serif; font-size: 14px; color: var(--ink-soft); line-height: 1.3; }
-  .sticky-cta-text strong { color: var(--ink); font-weight: 500; }
-  .sticky-btn { flex-shrink: 0; padding: 12px 22px; background: var(--amber); color: white; text-decoration: none; border-radius: 5px; font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 500; white-space: nowrap; transition: background .15s; }
-  .sticky-btn:hover { background: #b06508; }
+  .sticky-cta-text { font-family: 'DM Sans', sans-serif; font-size: 13px; color: var(--ink-soft); line-height: 1.35; }
+  .sticky-cta-text strong { color: var(--ink); font-weight: 600; display: block; }
+  .sticky-price { color: var(--red-alert); font-weight: 700; }
+  .sticky-btn {
+    flex-shrink: 0; padding: 12px 22px;
+    background: linear-gradient(135deg, #c86800, #f0a020);
+    color: white; text-decoration: none; border-radius: 6px;
+    font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 700;
+    white-space: nowrap; box-shadow: 0 3px 14px rgba(200,118,10,0.4);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .sticky-btn:hover { transform: translateY(-1px); box-shadow: 0 6px 20px rgba(200,118,10,0.5); }
 
-  .divider { text-align: center; margin: 36px 0; display: flex; align-items: center; gap: 12px; color: var(--ink-muted); font-size: 13px; font-family: 'DM Sans', sans-serif; letter-spacing: .1em; text-transform: uppercase; }
+  /* ── MISC ── */
+  .divider {
+    text-align: center; margin: 36px 0; display: flex; align-items: center; gap: 12px;
+    color: var(--ink-muted); font-size: 13px; font-family: 'DM Sans', sans-serif;
+    letter-spacing: .1em; text-transform: uppercase;
+  }
   .divider::before, .divider::after { content: ''; flex: 1; height: 1px; background: var(--border); }
 
-  footer { border-top: 1px solid var(--border); padding: 28px 20px; text-align: center; font-family: 'DM Sans', sans-serif; font-size: 12px; color: var(--ink-muted); line-height: 1.8; max-width: 740px; margin: 0 auto; }
+  footer {
+    border-top: 1px solid var(--border); padding: 28px 20px; text-align: center;
+    font-family: 'DM Sans', sans-serif; font-size: 12px; color: var(--ink-muted);
+    line-height: 1.8; max-width: 740px; margin: 0 auto;
+  }
   footer a { color: var(--ink-muted); }
 
-  .progress-bar { position: fixed; top: 0; left: 0; height: 3px; background: linear-gradient(90deg, var(--amber), var(--amber-light)); z-index: 200; transition: width .1s linear; width: 0%; }
+  .progress-bar {
+    position: fixed; top: 0; left: 0; height: 3px;
+    background: linear-gradient(90deg, var(--amber), var(--amber-light));
+    z-index: 200; transition: width .1s linear; width: 0%;
+  }
 
   .fade-in { opacity: 0; transform: translateY(20px); transition: opacity .6s ease, transform .6s ease; }
   .fade-in.visible { opacity: 1; transform: translateY(0); }
 
+  .disclaimer-inline {
+    font-family: 'DM Sans', sans-serif; font-size: 12px; color: var(--ink-muted);
+    border-top: 1px solid var(--border); padding-top: 16px; margin-top: 32px;
+    line-height: 1.7; font-style: italic;
+  }
+
+  /* ── RESPONSIVE ── */
   @media (max-width: 600px) {
     .stat-row { grid-template-columns: repeat(3, 1fr); gap: 10px; }
     .stat-number { font-size: 26px; }
     .checklist { grid-template-columns: 1fr; }
     .pullquote { margin: 36px -20px; padding: 24px 28px; }
-    .cta-section { padding: 28px 20px; }
+    .cta-inner { padding: 18px 14px 0; }
+    .cta-btn-wrap { padding: 0 14px; }
+    .cta-micro { padding: 0 14px; gap: 10px; }
+    .stock-bar { margin: 16px 14px 0; }
+    .pkg-selector { gap: 8px; }
+    .pkg-bottles { font-size: 24px; }
+    .pkg-price-per { font-size: 17px; }
+    .pkg-label, .pkg-per-label { font-size: 9px; }
+    .mid-cta { padding: 24px 16px; }
+    .mid-cta-btn { padding: 14px 24px; font-size: 15px; }
+    .countdown-box { padding: 12px 14px; font-size: 12px; }
+    .cd-unit { min-width: 36px; font-size: 18px; }
     .sticky-cta-text { font-size: 12px; }
-    .trust-row { gap: 16px; }
   }
-
-  .disclaimer-inline { font-family: 'DM Sans', sans-serif; font-size: 12px; color: var(--ink-muted); border-top: 1px solid var(--border); padding-top: 16px; margin-top: 32px; line-height: 1.7; font-style: italic; }
+  @media (max-width: 380px) {
+    .pkg-selector { grid-template-columns: 1fr; gap: 16px; }
+    .pkg-option { padding: 14px 16px 12px; }
+    .pkg-badge { font-size: 8px; }
+  }
 </style>
 </head>
 <body>
@@ -583,23 +565,19 @@
         var l = "a.mgid.com";
         var n = d.getElementsByTagName("script")[0];
         var s = d.createElement("script");
-        s.type = "text/javascript";
-        s.async = true;
+        s.type = "text/javascript"; s.async = true;
         var dt = !Date.now ? new Date().valueOf() : Date.now();
         s.src = "https://" + l + "/mgsensor.js?d=" + dt;
         n.parentNode.insertBefore(s, n);
     })();
 </script>
 
-<!-- Reading progress -->
 <div class="progress-bar" id="progress"></div>
 
-<!-- Top announcement -->
 <div class="topbar">
   ⚠️ Limited Offer: HepatoBurn is currently <span>73% OFF</span> — Only for readers of this article
 </div>
 
-<!-- ✅ FIX 2: Masthead updated to Nova Health Post -->
 <div class="masthead">
   <div class="masthead-label">Health & Wellness Report</div>
   <div class="masthead-name">Nova Health Post</div>
@@ -611,7 +589,6 @@
   </div>
 </div>
 
-<!-- Main article -->
 <div class="article">
 
   <div class="headline-block">
@@ -620,7 +597,6 @@
     <p class="deck">A landmark study of 49,000 overweight adults found one shocking factor in common: a sluggish, toxic liver. Now a simple daily formula is helping thousands reverse it — without starving or exercising.</p>
   </div>
 
-  <!-- ✅ FIX 3: Dynamic date -->
   <div class="byline">
     <div class="byline-avatar">S</div>
     <div>
@@ -630,7 +606,41 @@
   </div>
 
   <div class="hero-img">
-    <div class="hero-liver">🫁</div>
+    <div class="hero-liver">
+      <svg width="150" height="112" viewBox="0 0 160 120" xmlns="http://www.w3.org/2000/svg" aria-label="Liver illustration">
+        <defs>
+          <linearGradient id="liverGrad" x1="20%" y1="0%" x2="80%" y2="100%">
+            <stop offset="0%" stop-color="#d44040"/>
+            <stop offset="100%" stop-color="#8b1f1f"/>
+          </linearGradient>
+          <radialGradient id="liverShine" cx="32%" cy="28%" r="55%">
+            <stop offset="0%" stop-color="rgba(255,210,210,0.28)"/>
+            <stop offset="100%" stop-color="rgba(255,255,255,0)"/>
+          </radialGradient>
+          <radialGradient id="liverShadow" cx="50%" cy="80%" r="60%">
+            <stop offset="0%" stop-color="rgba(60,0,0,0.22)"/>
+            <stop offset="100%" stop-color="rgba(60,0,0,0)"/>
+          </radialGradient>
+        </defs>
+        <!-- Main liver body — right lobe larger, left lobe smaller, classic shape -->
+        <path d="M 30,50 C 18,24 50,7 70,24 C 82,9 120,6 150,30 C 172,48 164,92 142,104 C 120,116 82,120 54,112 C 26,104 16,74 30,50 Z" fill="url(#liverGrad)"/>
+        <!-- Shine -->
+        <path d="M 30,50 C 18,24 50,7 70,24 C 82,9 120,6 150,30 C 172,48 164,92 142,104 C 120,116 82,120 54,112 C 26,104 16,74 30,50 Z" fill="url(#liverShine)"/>
+        <!-- Depth shadow at base -->
+        <path d="M 30,50 C 18,24 50,7 70,24 C 82,9 120,6 150,30 C 172,48 164,92 142,104 C 120,116 82,120 54,112 C 26,104 16,74 30,50 Z" fill="url(#liverShadow)"/>
+        <!-- Inter-lobe fissure -->
+        <path d="M 70,24 C 66,55 62,85 54,112" stroke="rgba(0,0,0,0.18)" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+        <!-- Hepatic vessels (subtle) -->
+        <path d="M 95,55 C 105,50 118,52 128,60" stroke="rgba(255,255,255,0.18)" stroke-width="2" fill="none" stroke-linecap="round"/>
+        <path d="M 95,55 C 88,62 80,68 72,82" stroke="rgba(255,255,255,0.14)" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+        <path d="M 95,55 C 90,48 86,40 88,30" stroke="rgba(255,255,255,0.12)" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+        <!-- Texture specular dots -->
+        <circle cx="108" cy="60" r="4" fill="rgba(255,255,255,0.09)"/>
+        <circle cx="88" cy="76" r="3" fill="rgba(255,255,255,0.07)"/>
+        <circle cx="125" cy="78" r="2.5" fill="rgba(255,255,255,0.06)"/>
+      </svg>
+      <div class="hero-liver-label">Liver</div>
+    </div>
     <div class="hero-caption-box">
       Researchers now believe the liver — not the stomach — is the true control center of human metabolism
     </div>
@@ -745,27 +755,106 @@
     </div>
   </div>
 
-  <div class="divider">The official offer</div>
+  <!-- MID-ARTICLE CTA -->
+  <div class="mid-cta fade-in">
+    <div class="mid-cta-label">Special Reader Offer</div>
+    <div class="mid-cta-headline">Ready to Reset Your Liver?</div>
+    <div class="mid-cta-sub">Join 214,000+ people who've already restarted their fat-burning metabolism</div>
+    <a href="https://hop.clickbank.net/?vendor=hepatoburn&affiliate=dimka1104&lid=6100&tid=mgid" class="mid-cta-btn hoplink" target="_blank" rel="noopener">
+      Yes, I Want HepatoBurn — 73% Off Today
+    </a>
+    <div class="mid-cta-note">🔒 Secure checkout &nbsp;·&nbsp; Free US Shipping &nbsp;·&nbsp; 180-Day Money-Back Guarantee</div>
+  </div>
 
+  <div class="divider">Choose your supply</div>
+
+  <!-- MAIN CTA SECTION -->
   <div class="cta-section fade-in" id="main-cta">
-    <div class="cta-guarantee">✓ 180-Day Money-Back Guarantee — Zero Risk</div>
-    <div class="cta-headline">Try HepatoBurn Risk-Free Today</div>
-    <div class="cta-sub">Join 214,000+ people who've already restarted their metabolism</div>
-    <div class="cta-price-row">
-      <span class="price-old">$99/bottle</span>
-      <span class="price-new">$49</span>
-      <span class="price-note">Save 50% today only</span>
+
+    <!-- Countdown -->
+    <div class="countdown-box">
+      <div class="cd-label">⏰ Discounted price expires in:</div>
+      <div class="countdown-units">
+        <div class="cd-unit-wrap">
+          <div class="cd-unit" id="cd-h">--</div>
+          <div class="cd-sub">hrs</div>
+        </div>
+        <div class="cd-sep">:</div>
+        <div class="cd-unit-wrap">
+          <div class="cd-unit" id="cd-m">--</div>
+          <div class="cd-sub">min</div>
+        </div>
+        <div class="cd-sep">:</div>
+        <div class="cd-unit-wrap">
+          <div class="cd-unit" id="cd-s">--</div>
+          <div class="cd-sub">sec</div>
+        </div>
+      </div>
     </div>
 
-    <a href="https://hop.clickbank.net/?vendor=hepatoburn&affiliate=dimka1104&lid=6100&tid=mgid" class="cta-btn hoplink" id="main-cta-btn" target="_blank" rel="noopener">
-      <span>Yes! I Want to Try HepatoBurn →</span>
-    </a>
+    <div class="cta-inner">
+      <div class="cta-top-row">
+        <div class="cta-guarantee">✓ 180-Day Money-Back Guarantee</div>
+        <div class="cta-rating"><span class="stars">★★★★★</span> 4.9 · 12,400+ reviews</div>
+      </div>
+      <div class="cta-headline">Try HepatoBurn Risk-Free Today</div>
+      <div class="cta-sub">The longer you commit, the better your results — and your savings</div>
+
+      <!-- Package selector -->
+      <div class="pkg-selector">
+
+        <div class="pkg-option" id="pkg-1" data-price="$49" data-save="Save 73%" data-btn="Claim My 1-Bottle Supply — Save 73% →">
+          <div class="pkg-check">✓</div>
+          <div class="pkg-bottles">1</div>
+          <div class="pkg-label">Bottle</div>
+          <div class="pkg-duration">30-Day Supply</div>
+          <div class="pkg-was">was $179</div>
+          <div class="pkg-price-per">$49</div>
+          <div class="pkg-per-label">per bottle</div>
+          <div class="pkg-save-tag">Save 73%</div>
+        </div>
+
+        <div class="pkg-option selected" id="pkg-3" data-price="$39" data-save="Save 78%" data-btn="Claim My 3-Bottle Supply — Save 78% →">
+          <div class="pkg-badge">MOST POPULAR</div>
+          <div class="pkg-check">✓</div>
+          <div class="pkg-bottles">3</div>
+          <div class="pkg-label">Bottles</div>
+          <div class="pkg-duration">90-Day Supply</div>
+          <div class="pkg-was">was $537</div>
+          <div class="pkg-price-per">$39</div>
+          <div class="pkg-per-label">per bottle · $117 total</div>
+          <div class="pkg-save-tag">Save 78%</div>
+        </div>
+
+        <div class="pkg-option" id="pkg-6" data-price="$29" data-save="Save 84%" data-btn="Claim My 6-Bottle Supply — Save 84% →">
+          <div class="pkg-badge gold">BEST VALUE</div>
+          <div class="pkg-check">✓</div>
+          <div class="pkg-bottles">6</div>
+          <div class="pkg-label">Bottles</div>
+          <div class="pkg-duration">180-Day Supply</div>
+          <div class="pkg-was">was $1,074</div>
+          <div class="pkg-price-per">$29</div>
+          <div class="pkg-per-label">per bottle · $174 total</div>
+          <div class="pkg-save-tag">Save 84%</div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="cta-btn-wrap">
+      <a href="https://hop.clickbank.net/?vendor=hepatoburn&affiliate=dimka1104&lid=6100&tid=mgid" class="cta-btn hoplink" id="main-cta-btn" target="_blank" rel="noopener">
+        <span id="btn-text">Claim My 3-Bottle Supply — Save 78% →</span>
+        <span class="btn-sub">Free Shipping · Ships in 24 Hours · No Subscription</span>
+      </a>
+    </div>
 
     <div class="cta-micro">
-      <span>🔒 256-bit SSL Secure Checkout</span>
+      <span>🔒 256-bit SSL Secure</span>
       <span>🚚 Free US Shipping</span>
       <span>↩ 180-Day Guarantee</span>
+      <span>🏭 Made in USA</span>
     </div>
+
     <div class="stock-bar">
       <div>Current stock level:</div>
       <div class="stock-track"><div class="stock-fill"></div></div>
@@ -773,12 +862,38 @@
     </div>
   </div>
 
-  <div class="trust-row fade-in">
-    <div class="trust-badge"><div class="trust-icon">🏭</div>FDA Registered<br>Facility</div>
-    <div class="trust-badge"><div class="trust-icon">🌿</div>All Natural<br>Ingredients</div>
-    <div class="trust-badge"><div class="trust-icon">🔬</div>GMP<br>Certified</div>
-    <div class="trust-badge"><div class="trust-icon">🇺🇸</div>Made in<br>the USA</div>
-    <div class="trust-badge"><div class="trust-icon">↩</div>180-Day<br>Guarantee</div>
+  <!-- Trust chips -->
+  <div class="trust-strip fade-in">
+    <div class="trust-chip"><span>🏭</span> FDA Registered Facility</div>
+    <div class="trust-chip"><span>🌿</span> All Natural Ingredients</div>
+    <div class="trust-chip"><span>🔬</span> GMP Certified</div>
+    <div class="trust-chip"><span>🇺🇸</span> Made in the USA</div>
+    <div class="trust-chip"><span>↩</span> 180-Day Guarantee</div>
+  </div>
+
+  <!-- FAQ -->
+  <h2>Common Questions</h2>
+  <div class="faq-section fade-in">
+    <div class="faq-item">
+      <button class="faq-q">How quickly will I see results? <span class="faq-chevron">▾</span></button>
+      <div class="faq-a">Most customers notice improved energy and reduced bloating within the first 7–10 days. Measurable weight loss typically begins around the 3–4 week mark. For full liver restoration, a 90–180 day course is recommended.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">Is HepatoBurn safe? Are there side effects? <span class="faq-chevron">▾</span></button>
+      <div class="faq-a">HepatoBurn is made from 100% natural, clinically studied ingredients and manufactured in an FDA-registered, GMP-certified facility. No serious side effects have been reported. Consult your doctor if you are pregnant, nursing, or on prescription medication.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">What if it doesn't work for me? <span class="faq-chevron">▾</span></button>
+      <div class="faq-a">Every order is backed by a full 180-day money-back guarantee. If you're not completely satisfied for any reason, contact the customer support team for a full refund — no questions asked, no hassle, no fine print.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">Why do the 3 and 6 bottle packs save more? <span class="faq-chevron">▾</span></button>
+      <div class="faq-a">Liver restoration takes time. Clinical data shows the most dramatic transformations happen between 60–180 days. Multi-bottle packs also lock in today's promotional price — once this stock runs out, prices return to $179 per bottle at full retail.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">How do I take HepatoBurn? <span class="faq-chevron">▾</span></button>
+      <div class="faq-a">Take 2 capsules daily with a full glass of water, ideally with your largest meal of the day. Each bottle contains a full 30-day supply (60 capsules). No subscription — you choose when to reorder.</div>
+    </div>
   </div>
 
   <div class="disclaimer-inline">
@@ -787,7 +902,6 @@
 
 </div>
 
-<!-- ✅ FIX 2: Footer updated to Nova Health Post -->
 <footer>
   © <span id="footer-year"></span> Nova Health Post &nbsp;|&nbsp; <a href="#">Privacy Policy</a> &nbsp;|&nbsp; <a href="#">Terms of Use</a> &nbsp;|&nbsp; <a href="#">Contact</a><br>
   This site is part of an affiliate marketing program. We may receive compensation when you click links and make purchases.
@@ -796,10 +910,10 @@
 <!-- Sticky CTA -->
 <div class="sticky-cta" id="sticky-cta">
   <div class="sticky-cta-text">
-    <strong>HepatoBurn</strong> — 73% OFF today only<br>
-    180-day money-back guarantee
+    <strong>HepatoBurn — Limited Stock</strong>
+    From <span class="sticky-price">$29/bottle</span> · 180-day guarantee
   </div>
-  <a href="https://hop.clickbank.net/?vendor=hepatoburn&affiliate=dimka1104&lid=6100&tid=mgid" class="sticky-btn hoplink" id="sticky-cta-btn" target="_blank" rel="noopener">Claim Discount →</a>
+  <a href="https://hop.clickbank.net/?vendor=hepatoburn&affiliate=dimka1104&lid=6100&tid=mgid" class="sticky-btn hoplink" id="sticky-cta-btn" target="_blank" rel="noopener">Claim 73% Off →</a>
 </div>
 
 <script>
@@ -814,8 +928,7 @@
   // ── STICKY CTA ──
   const stickyCta = document.getElementById('sticky-cta');
   window.addEventListener('scroll', () => {
-    if (window.scrollY > 600) stickyCta.classList.add('visible');
-    else stickyCta.classList.remove('visible');
+    stickyCta.classList.toggle('visible', window.scrollY > 600);
   });
 
   // ── FADE IN OBSERVER ──
@@ -833,24 +946,56 @@
     countEl.textContent = baseCount.toLocaleString();
   }, 4000);
 
-  // ── DYNAMIC DATE ──
+  // ── DYNAMIC DATES ──
   const now = new Date();
-  const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-  document.getElementById('byline-date').textContent = now.toLocaleDateString('en-US', options);
+  document.getElementById('byline-date').textContent = now.toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
   document.getElementById('pub-date').textContent = 'Updated ' + now.toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
   document.getElementById('footer-year').textContent = now.getFullYear();
+  document.getElementById('reader-count').textContent = (Math.floor(Math.random() * 2000) + 3000).toLocaleString();
 
-  // ── DYNAMIC READER COUNT ──
-  const readerCount = Math.floor(Math.random() * 2000) + 3000;
-  document.getElementById('reader-count').textContent = readerCount.toLocaleString();
+  // ── COUNTDOWN TIMER ──
+  (function() {
+    var key = 'hb_cd_end';
+    var end = parseInt(localStorage.getItem(key) || '0', 10);
+    if (!end || end < Date.now()) {
+      end = Date.now() + (3 * 3600000) + Math.floor(Math.random() * 45 * 60000);
+      localStorage.setItem(key, end);
+    }
+    function pad(n) { return n < 10 ? '0' + n : '' + n; }
+    function tick() {
+      var diff = Math.max(0, end - Date.now());
+      document.getElementById('cd-h').textContent = pad(Math.floor(diff / 3600000));
+      document.getElementById('cd-m').textContent = pad(Math.floor((diff % 3600000) / 60000));
+      document.getElementById('cd-s').textContent = pad(Math.floor((diff % 60000) / 1000));
+    }
+    tick();
+    setInterval(tick, 1000);
+  })();
 
-  // MGID CONVERSION TRACKING — fires on ALL CTA clicks
+  // ── PACKAGE SELECTOR ──
+  document.querySelectorAll('.pkg-option').forEach(function(opt) {
+    opt.addEventListener('click', function() {
+      document.querySelectorAll('.pkg-option').forEach(function(o) { o.classList.remove('selected'); });
+      opt.classList.add('selected');
+      var btnText = opt.getAttribute('data-btn');
+      if (btnText) document.getElementById('btn-text').textContent = btnText;
+    });
+  });
+
+  // ── FAQ ACCORDION ──
+  document.querySelectorAll('.faq-q').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var item = btn.closest('.faq-item');
+      var wasOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(function(i) { i.classList.remove('open'); });
+      if (!wasOpen) item.classList.add('open');
+    });
+  });
+
+  // ── MGID CONVERSION TRACKING ──
   document.querySelectorAll('.hoplink').forEach(function(btn) {
     btn.addEventListener('click', function() {
-      try {
-        window._mgq = window._mgq || [];
-        window._mgq.push(["MgSensorInvoke", "purchase"]);
-      } catch(e) {}
+      try { window._mgq = window._mgq || []; window._mgq.push(["MgSensorInvoke", "purchase"]); } catch(e) {}
     });
   });
 </script>
