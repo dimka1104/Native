@@ -262,7 +262,9 @@ h1 mark {
 }
 .hero-content { position: relative; text-align: center; }
 .hero-icon { font-size: 64px; margin-bottom: 16px; display: block; filter: drop-shadow(0 8px 24px rgba(74,144,217,0.4)); animation: float 4s ease-in-out infinite; }
-.hero-image { width: 100%; max-height: 420px; object-fit: cover; border-radius: 8px; margin-bottom: 16px; display: block; box-shadow: 0 8px 32px rgba(0,0,0,0.4); }
+.hero-image { width: 100%; max-height: 460px; object-fit: cover; border-radius: 6px 6px 0 0; display: block; }
+.research-figure { margin: 0 0 28px; border-radius: 6px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.15); }
+.research-caption { display: block; background: #f4f5f7; border-top: 1px solid #dde1e8; padding: 10px 16px; font-size: 12px; color: #5a6478; font-style: italic; text-align: left; }
 @keyframes float {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-8px); }
@@ -276,17 +278,6 @@ h1 mark {
   font-weight: 300;
 }
 .hero-caption strong { color: var(--gold-light); font-weight: 600; }
-.hero-label {
-  position: absolute;
-  bottom: 0; left: 0; right: 0;
-  background: rgba(10,22,40,0.85);
-  backdrop-filter: blur(4px);
-  padding: 10px 20px;
-  font-size: 12px;
-  color: rgba(255,255,255,0.6);
-  text-align: center;
-  font-style: italic;
-}
 
 /* ── BODY TEXT ── */
 .article p { margin-bottom: 24px; color: #2a3550; }
@@ -866,13 +857,17 @@ footer a { color: var(--ink-muted); }
   <!-- Hero -->
   <div class="hero reveal">
     <div class="hero-content">
-      <img src="prostate.jpg" alt="Harvard Medical Research Laboratory — Prostate tissue analysis, 2024" class="hero-image">
       <p class="hero-caption">
         Harvard researchers identified a <strong>specific toxic mineral buildup</strong> in the prostate tissue of 94% of men over 45 with urinary symptoms — and traced it directly to municipal tap water
       </p>
     </div>
-    <div class="hero-label">Image: Harvard Medical Research Laboratory — Prostate tissue analysis, 2024</div>
   </div>
+
+  <!-- Research image -->
+  <figure class="research-figure">
+    <img src="prostate.jpg" alt="Harvard Medical Research Laboratory — Prostate tissue analysis, 2024" class="hero-image">
+    <figcaption class="research-caption">Image: Harvard Medical Research Laboratory — Prostate tissue analysis, 2024</figcaption>
+  </figure>
 
   <!-- Body -->
   <p>If you're a man over 45 who wakes up two, three, even four times a night to urinate… who feels like your bladder never fully empties… who has watched your confidence, your sleep, and your energy slowly drain away — you are not alone, and this is not simply "part of getting older."</p>
