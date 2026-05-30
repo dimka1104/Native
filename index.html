@@ -310,6 +310,44 @@ footer a { color: var(--ink-muted); }
 
 .disclaimer { border-top: 1px solid var(--border); padding-top: 20px; margin-top: 36px; font-size: 12px; color: var(--ink-muted); line-height: 1.7; font-style: italic; font-family: 'Barlow', sans-serif; }
 
+.bottom-cta {
+  position: fixed;
+  left: 50%;
+  bottom: 22px;
+  transform: translateX(-50%) translateY(120%);
+  opacity: 0;
+  pointer-events: none;
+  transition: transform .35s ease, opacity .35s ease;
+  z-index: 1000;
+}
+.bottom-cta.show {
+  transform: translateX(-50%) translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+.bottom-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 210px;
+  padding: 14px 24px;
+  background: var(--navy);
+  color: white;
+  text-decoration: none;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  border-radius: 999px;
+  box-shadow: 0 16px 38px rgba(10,22,40,0.18);
+  border: 1px solid rgba(255,255,255,0.12);
+}
+.bottom-cta-btn:hover {
+  transform: translateY(-1px);
+  background: var(--steel);
+}
+
 .cta-inline { background: rgba(250,247,238,0.95); border: 1px solid rgba(10,22,40,0.08); border-radius: 8px; padding: 24px 28px; margin: 36px 0; display: flex; align-items: center; gap: 20px; flex-wrap: wrap; }
 .cta-inline-text { flex: 1; min-width: 200px; }
 .cta-inline-text strong { font-family: 'Bitter', serif; font-size: clamp(16px, 2.5vw, 20px); color: var(--navy); display: block; margin-bottom: 4px; }
@@ -581,7 +619,11 @@ footer a { color: var(--ink-muted); }
   This site participates in affiliate marketing programs. We may receive compensation when you purchase through links on this page.
 </footer>
 
-<!-- no sticky CTA to keep the layout focused -->
+<div class="bottom-cta" id="bottomCta">
+  <a href="https://hop.clickbank.net/?affiliate=dimka1104&vendor=prostadine&cbpage=tsl" class="bottom-cta-btn hoplink" target="_blank" rel="nofollow noopener noreferrer">
+    Read more details
+  </a>
+</div>
 
 <script>
   const prog = document.getElementById('progress');
@@ -599,6 +641,17 @@ footer a { color: var(--ink-muted); }
   document.getElementById('pub-date').textContent = 'Updated ' + now.toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
   document.getElementById('footer-year').textContent = now.getFullYear();
   // Removed reader count and live demand counters for simplicity
+
+  const bottomCta = document.getElementById('bottomCta');
+  const toggleBottomCta = () => {
+    const scrollPosition = window.scrollY + window.innerHeight;
+    const threshold = document.documentElement.scrollHeight - 260;
+    bottomCta.classList.toggle('show', scrollPosition >= threshold);
+  };
+
+  window.addEventListener('scroll', toggleBottomCta);
+  window.addEventListener('resize', toggleBottomCta);
+  toggleBottomCta();
 
   document.querySelectorAll('.hoplink').forEach(btn => {
     btn.addEventListener('click', () => {
