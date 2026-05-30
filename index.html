@@ -49,7 +49,7 @@ body {
 }
 
 .breaking {
-  background: var(--red);
+  background: var(--navy-light);
   color: white;
   text-align: center;
   padding: 10px 20px;
@@ -65,7 +65,7 @@ body {
 }
 .breaking-dot {
   width: 8px; height: 8px;
-  background: #ff9999;
+  background: rgba(255,255,255,0.6);
   border-radius: 50%;
   animation: pulse-dot 1.2s ease-in-out infinite;
   flex-shrink: 0;
@@ -266,22 +266,16 @@ h3 { font-family: 'Barlow Condensed', sans-serif; font-size: 13px; font-weight: 
 .urgency-count { margin-left: auto; font-family: 'Barlow Condensed', sans-serif; font-size: 22px; font-weight: 700; color: var(--gold-light); }
 .urgency-count-label { font-size: 11px; color: rgba(255,255,255,0.5); text-align: right; font-family: 'Barlow', sans-serif; }
 
-.cta-section { background: var(--navy); border-radius: 8px; padding: 44px 36px; margin: 44px 0; text-align: center; position: relative; overflow: hidden; box-shadow: var(--shadow-lg); }
-.cta-section::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at top center, rgba(74,144,217,0.15) 0%, transparent 70%); }
-.cta-section::after { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--steel), var(--gold), var(--sky), var(--gold), var(--steel)); }
-.cta-guarantee { display: inline-flex; align-items: center; gap: 8px; background: rgba(26,122,74,0.2); border: 1px solid rgba(26,122,74,0.4); color: #5dba8a; font-family: 'Barlow Condensed', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; padding: 6px 14px; border-radius: 20px; margin-bottom: 20px; position: relative; }
-.cta-headline { font-family: 'Bitter', serif; font-size: clamp(24px, 4vw, 36px); font-weight: 900; color: white; line-height: 1.15; margin-bottom: 10px; position: relative; }
-.cta-headline span { color: var(--gold-light); }
-.cta-sub { color: rgba(255,255,255,0.55); font-size: 16px; margin-bottom: 30px; position: relative; font-style: italic; }
-.price-row { display: flex; align-items: center; justify-content: center; gap: 16px; margin-bottom: 28px; flex-wrap: wrap; position: relative; }
-.price-old { font-size: 20px; color: rgba(255,255,255,0.3); text-decoration: line-through; font-family: 'Barlow', sans-serif; }
-.price-new { font-family: 'Bitter', serif; font-size: 52px; font-weight: 900; color: var(--gold-light); line-height: 1; }
-.price-save { background: var(--red); color: white; font-family: 'Barlow Condensed', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; padding: 5px 12px; border-radius: 20px; }
+.cta-section { background: white; border-radius: 8px; padding: 32px 28px; margin: 32px 0; text-align: center; position: relative; overflow: hidden; border: 1px solid rgba(10,22,40,0.08); }
+.cta-section::before, .cta-section::after { display: none; }
+.cta-guarantee { display: inline-flex; align-items: center; gap: 8px; background: rgba(26,122,74,0.12); border: 1px solid rgba(26,122,74,0.18); color: #2f7147; font-family: 'Barlow Condensed', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; padding: 6px 12px; border-radius: 18px; margin-bottom: 18px; position: relative; }
+.cta-headline { font-family: 'Bitter', serif; font-size: clamp(22px, 3vw, 28px); font-weight: 900; color: var(--navy); line-height: 1.15; margin-bottom: 8px; position: relative; }
+.cta-headline span { color: var(--steel); }
+.cta-sub { color: var(--ink-soft); font-size: 15px; margin-bottom: 22px; position: relative; font-style: normal; }
+.price-row { display: none; }
 
-.cta-btn { display: block; width: 100%; max-width: 500px; margin: 0 auto 16px; padding: 22px 32px; background: linear-gradient(135deg, var(--gold), var(--gold-light), var(--gold)); background-size: 200% auto; color: var(--navy); text-decoration: none; font-family: 'Barlow Condensed', sans-serif; font-size: 20px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; border-radius: 4px; border: none; cursor: pointer; box-shadow: 0 8px 32px rgba(201,168,76,0.4), 0 2px 8px rgba(201,168,76,0.3); transition: background-position .4s, transform .15s, box-shadow .15s; position: relative; overflow: hidden; }
-.cta-btn::before { content: ''; position: absolute; top: 0; left: -100%; width: 60%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.25), transparent); transition: left .6s ease; }
-.cta-btn:hover::before { left: 150%; }
-.cta-btn:hover { background-position: right center; transform: translateY(-2px); box-shadow: 0 12px 40px rgba(201,168,76,0.5); }
+.cta-btn { display: inline-block; width: auto; max-width: none; margin: 0 auto 12px; padding: 14px 26px; background: var(--navy); color: white; text-decoration: none; font-family: 'Barlow Condensed', sans-serif; font-size: 15px; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; border-radius: 6px; border: none; cursor: pointer; box-shadow: 0 10px 20px rgba(10,22,40,0.14); transition: transform .15s, box-shadow .15s, background .15s; position: relative; overflow: hidden; }
+.cta-btn:hover { background: var(--steel); transform: translateY(-1px); box-shadow: 0 12px 24px rgba(10,22,40,0.16); }
 .cta-btn:active { transform: translateY(0); }
 
 .cta-micro { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; font-family: 'Barlow', sans-serif; font-size: 13px; color: rgba(255,255,255,0.45); margin-top: 14px; position: relative; }
@@ -316,18 +310,18 @@ footer a { color: var(--ink-muted); }
 
 .disclaimer { border-top: 1px solid var(--border); padding-top: 20px; margin-top: 36px; font-size: 12px; color: var(--ink-muted); line-height: 1.7; font-style: italic; font-family: 'Barlow', sans-serif; }
 
-.cta-inline { background: linear-gradient(135deg, var(--navy), var(--navy-light)); border: 1px solid rgba(201,168,76,0.35); border-radius: 6px; padding: 24px 28px; margin: 36px 0; display: flex; align-items: center; gap: 20px; flex-wrap: wrap; }
+.cta-inline { background: rgba(250,247,238,0.95); border: 1px solid rgba(10,22,40,0.08); border-radius: 8px; padding: 24px 28px; margin: 36px 0; display: flex; align-items: center; gap: 20px; flex-wrap: wrap; }
 .cta-inline-text { flex: 1; min-width: 200px; }
-.cta-inline-text strong { font-family: 'Bitter', serif; font-size: clamp(16px, 2.5vw, 20px); color: var(--gold-light); display: block; margin-bottom: 4px; }
-.cta-inline-text span { font-size: 14px; color: rgba(255,255,255,0.6); }
-.cta-inline-btn { flex-shrink: 0; display: inline-block; padding: 15px 28px; background: linear-gradient(135deg, var(--gold), var(--gold-light)); color: var(--navy); font-family: 'Barlow Condensed', sans-serif; font-size: 16px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; text-decoration: none; border-radius: 4px; border: none; cursor: pointer; box-shadow: 0 6px 24px rgba(201,168,76,0.35); transition: transform .15s, box-shadow .15s; white-space: nowrap; }
-.cta-inline-btn:hover { transform: translateY(-2px); box-shadow: 0 10px 32px rgba(201,168,76,0.5); }
-.cta-inline-badge { font-size: 11px; color: #5dba8a; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; margin-top: 6px; display: block; }
+.cta-inline-text strong { font-family: 'Bitter', serif; font-size: clamp(16px, 2.5vw, 20px); color: var(--navy); display: block; margin-bottom: 4px; }
+.cta-inline-text span { font-size: 14px; color: var(--ink-soft); }
+.cta-inline-btn { flex-shrink: 0; display: inline-block; padding: 14px 26px; background: var(--navy); color: white; font-family: 'Barlow Condensed', sans-serif; font-size: 15px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; text-decoration: none; border-radius: 6px; border: none; cursor: pointer; box-shadow: 0 6px 18px rgba(10,22,40,0.12); transition: transform .15s, box-shadow .15s; white-space: nowrap; }
+.cta-inline-btn:hover { transform: translateY(-1px); box-shadow: 0 8px 22px rgba(10,22,40,0.18); }
+.cta-inline-badge { font-size: 11px; color: var(--green); font-family: 'Barlow Condensed', sans-serif; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; margin-top: 6px; display: block; }
 
-.hero-cta { margin: 26px 0 0; padding: 22px 24px; border-radius: 12px; background: linear-gradient(135deg, #fff7d0, #f7e5aa); text-align: center; border: 1px solid rgba(201,168,76,0.35); }
-.hero-cta-copy { margin: 0 0 16px; font-size: 16px; font-weight: 700; line-height: 1.5; color: var(--navy); }
-.hero-cta-btn { display: inline-block; padding: 16px 30px; background: var(--navy); color: white; font-family: 'Barlow Condensed', sans-serif; font-size: 15px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; text-decoration: none; border-radius: 8px; box-shadow: 0 10px 30px rgba(10,22,40,0.18); transition: transform .15s, background .15s; }
-.hero-cta-btn:hover { transform: translateY(-1px); background: var(--steel); }
+.hero-cta { margin: 26px 0 0; padding: 20px 22px; border-radius: 12px; background: rgba(250,250,250,0.95); text-align: center; border: 1px solid rgba(10,22,40,0.06); }
+.hero-cta-copy { margin: 0 0 14px; font-size: 15px; font-weight: 600; line-height: 1.6; color: var(--navy); }
+.hero-cta-btn { display: inline-block; padding: 12px 24px; background: transparent; color: var(--navy); font-family: 'Barlow Condensed', sans-serif; font-size: 14px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; text-decoration: none; border-radius: 999px; border: 1px solid var(--navy); box-shadow: none; transition: transform .15s, background .15s, color .15s; }
+.hero-cta-btn:hover { transform: translateY(-1px); background: var(--navy); color: white; }
 
 .steps-block { margin: 36px 0; padding: 24px 26px; border-radius: 10px; background: white; border: 1px solid var(--border); }
 .steps-block h3 { font-family: 'Bitter', serif; font-size: clamp(20px, 3vw, 24px); color: var(--navy); margin-bottom: 18px; }
@@ -409,9 +403,9 @@ footer a { color: var(--ink-muted); }
     <h1>Discover Natural Support for <em>Prostate Health</em> and <mark>Urinary Comfort</mark></h1>
     <p class="standfirst">Millions of men experience urinary challenges and discomfort as they age. Discover how nutrition and lifestyle choices may support prostate health and improve quality of life.</p>
 
-    <div class="hero-cta reveal">
-      <p class="hero-cta-copy">Read more about the natural formula many men are choosing to support urinary comfort and prostate wellbeing.</p>
-      <a href="https://hop.clickbank.net/?affiliate=dimka1104&vendor=prostadine&cbpage=tsl" class="hero-cta-btn hoplink" target="_blank" rel="nofollow noopener noreferrer">Read the product details</a>
+      <div class="hero-cta reveal">
+      <p class="hero-cta-copy">If you want to dive deeper after reading, an ingredient profile and usage summary are available.</p>
+      <a href="https://hop.clickbank.net/?affiliate=dimka1104&vendor=prostadine&cbpage=tsl" class="hero-cta-btn hoplink" target="_blank" rel="nofollow noopener noreferrer">Read more</a>
     </div>
   </div>
 
@@ -565,64 +559,13 @@ footer a { color: var(--ink-muted); }
 
   <div class="cta-inline reveal">
     <div class="cta-inline-text">
-      <strong>Curious about a natural support option?</strong>
-      <span>Explore the product details and learn more about ingredients and usage.</span>
+      <strong>Curious about a natural support formula?</strong>
+      <span>Read the ingredient profile, usage guidance, and research summary.</span>
       <span class="cta-inline-badge">✓ 60-Day Money-Back Guarantee</span>
     </div>
-    <a href="https://hop.clickbank.net/?affiliate=dimka1104&vendor=prostadine&cbpage=tsl" class="cta-inline-btn hoplink" target="_blank" rel="nofollow noopener noreferrer">Learn more →</a>
+    <a href="https://hop.clickbank.net/?affiliate=dimka1104&vendor=prostadine&cbpage=tsl" class="cta-inline-btn hoplink" target="_blank" rel="nofollow noopener noreferrer">Read more →</a>
   </div>
 
-  <div class="steps-block reveal">
-    <h3>How to explore this natural formula</h3>
-    <div class="steps-grid">
-      <div class="step-card">
-        <div class="step-number">1</div>
-        <div class="step-title">Open the page</div>
-        <div class="step-desc">View the natural support formula and ingredient details.</div>
-      </div>
-      <div class="step-card">
-        <div class="step-number">2</div>
-        <div class="step-title">Read the details</div>
-        <div class="step-desc">Check the benefits, guarantee, and suggested use.</div>
-      </div>
-      <div class="step-card">
-        <div class="step-number">3</div>
-        <div class="step-title">Decide at your own pace</div>
-        <div class="step-desc">Choose whether the formula fits your needs without pressure.</div>
-      </div>
-    </div>
-  </div>
-
-  <div class="section-divider"><div class="section-divider-text">Product Details</div></div>
-
-  <div class="cta-section reveal" id="main-cta">
-    <div class="cta-guarantee">✓ 60‑Day Money‑Back Guarantee</div>
-    <div class="cta-headline">Try Prostadine <span>Risk-Free</span> Today</div>
-    <div class="cta-sub">Experience the potential benefits of natural prostate support</div>
-    <div class="price-row">
-      <span class="price-old">Regular: $99 per bottle</span>
-      <span class="price-new">Current price: $49 per bottle</span>
-    </div>
-    <a href="https://hop.clickbank.net/?affiliate=dimka1104&vendor=prostadine&cbpage=tsl" class="cta-btn hoplink" id="main-cta-btn" target="_blank" rel="nofollow noopener noreferrer">
-      Read the product details →
-    </a>
-    <div class="cta-micro">
-      <span>🔒 256-bit SSL Secure</span>
-      <span>🚚 Free US Shipping</span>
-      <span>↩ 60-Day Guarantee</span>
-      <span>🇺🇸 Made in USA</span>
-    </div>
-    <!-- Stock information removed to avoid urgency marketing -->
-  </div>
-
-  <div class="trust-row reveal">
-    <div class="trust-item"><div class="trust-icon">🏭</div><div class="trust-label">FDA Reg.<br>Facility</div></div>
-    <div class="trust-item"><div class="trust-icon">🌿</div><div class="trust-label">All Natural<br>Formula</div></div>
-    <div class="trust-item"><div class="trust-icon">🔬</div><div class="trust-label">GMP<br>Certified</div></div>
-    <div class="trust-item"><div class="trust-icon">🇺🇸</div><div class="trust-label">Made in<br>USA</div></div>
-    <div class="trust-item"><div class="trust-icon">↩</div><div class="trust-label">60-Day<br>Guarantee</div></div>
-    <div class="trust-item"><div class="trust-icon">🔒</div><div class="trust-label">Secure<br>Checkout</div></div>
-  </div>
 
   <div class="disclaimer">
     <strong>Disclaimer:</strong> This article is sponsored editorial content. Results may vary from person to person. Prostadine is a dietary supplement and has not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease and is not for use by persons under 18. Testimonials are from real customers; individual results will vary. Always consult your physician before starting any new dietary supplement, particularly if you are taking prescription medications or have a medical condition.
@@ -638,22 +581,13 @@ footer a { color: var(--ink-muted); }
   This site participates in affiliate marketing programs. We may receive compensation when you purchase through links on this page.
 </footer>
 
-<div class="sticky" id="sticky">
-  <div class="sticky-text">
-    <strong>Prostadine — Natural Prostate Support</strong>
-    60‑day money‑back guarantee · Free US shipping
-  </div>
-  <a href="https://hop.clickbank.net/?affiliate=dimka1104&vendor=prostadine&cbpage=tsl" class="sticky-btn hoplink" target="_blank" rel="nofollow noopener noreferrer">Learn more →</a>
-</div>
+<!-- no sticky CTA to keep the layout focused -->
 
 <script>
   const prog = document.getElementById('progress');
   window.addEventListener('scroll', () => {
     prog.style.width = Math.min(100, window.scrollY / (document.documentElement.scrollHeight - window.innerHeight) * 100) + '%';
   });
-
-  const sticky = document.getElementById('sticky');
-  window.addEventListener('scroll', () => { sticky.classList.toggle('show', window.scrollY > 700); });
 
   const revealObserver = new IntersectionObserver((entries) => {
     entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); });
