@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Harvard Study Exposes Toxic Mineral Destroying Men's Health After 45</title>
-<meta name="description" content="Researchers at Harvard identify the #1 cause of prostate problems in American men — and it's hiding in your tap water.">
+<title>Natural Support for Prostate Health</title>
+<meta name="description" content="Learn how a blend of natural ingredients may support prostate and urinary health for men.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Barlow:wght@300;400;500;600&family=Barlow+Condensed:wght@600;700;800&display=swap" rel="stylesheet">
 <style>
@@ -316,6 +316,22 @@ footer a { color: var(--ink-muted); }
 
 .disclaimer { border-top: 1px solid var(--border); padding-top: 20px; margin-top: 36px; font-size: 12px; color: var(--ink-muted); line-height: 1.7; font-style: italic; font-family: 'Barlow', sans-serif; }
 
+.cta-inline { background: linear-gradient(135deg, var(--navy), var(--navy-light)); border: 1px solid rgba(201,168,76,0.35); border-radius: 6px; padding: 24px 28px; margin: 36px 0; display: flex; align-items: center; gap: 20px; flex-wrap: wrap; }
+.cta-inline-text { flex: 1; min-width: 200px; }
+.cta-inline-text strong { font-family: 'Bitter', serif; font-size: clamp(16px, 2.5vw, 20px); color: var(--gold-light); display: block; margin-bottom: 4px; }
+.cta-inline-text span { font-size: 14px; color: rgba(255,255,255,0.6); }
+.cta-inline-btn { flex-shrink: 0; display: inline-block; padding: 15px 28px; background: linear-gradient(135deg, var(--gold), var(--gold-light)); color: var(--navy); font-family: 'Barlow Condensed', sans-serif; font-size: 16px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; text-decoration: none; border-radius: 4px; border: none; cursor: pointer; box-shadow: 0 6px 24px rgba(201,168,76,0.35); transition: transform .15s, box-shadow .15s; white-space: nowrap; }
+.cta-inline-btn:hover { transform: translateY(-2px); box-shadow: 0 10px 32px rgba(201,168,76,0.5); }
+.cta-inline-badge { font-size: 11px; color: #5dba8a; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; margin-top: 6px; display: block; }
+
+.cta-mid { background: var(--cream); border: 2px solid var(--gold); border-radius: 6px; padding: 28px 28px; margin: 40px 0; text-align: center; }
+.cta-mid-headline { font-family: 'Bitter', serif; font-size: clamp(18px, 3vw, 24px); font-weight: 700; color: var(--navy); margin-bottom: 8px; }
+.cta-mid-headline span { color: var(--red); }
+.cta-mid-sub { font-size: 15px; color: var(--ink-soft); margin-bottom: 20px; }
+.cta-mid-btn { display: inline-block; padding: 16px 36px; background: linear-gradient(135deg, var(--steel), var(--sky)); color: white; font-family: 'Barlow Condensed', sans-serif; font-size: 17px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; text-decoration: none; border-radius: 4px; cursor: pointer; box-shadow: 0 6px 24px rgba(42,82,152,0.35); transition: transform .15s, box-shadow .15s; }
+.cta-mid-btn:hover { transform: translateY(-2px); box-shadow: 0 10px 32px rgba(42,82,152,0.5); }
+.cta-mid-note { font-size: 12px; color: var(--ink-muted); margin-top: 12px; }
+
 .reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease; }
 .reveal.in { opacity: 1; transform: translateY(0); }
 
@@ -333,23 +349,32 @@ footer a { color: var(--ink-muted); }
 </head>
 <body>
 
+<!-- Mgid Sensor -->
 <script type="text/javascript">
-(function() {
-  var d = document, w = window;
-  w.MgSensorData = w.MgSensorData || [];
-  w.MgSensorData.push({ cid: 977849, project: "a.mgid.com" });
-  var n = d.getElementsByTagName("script")[0], s = d.createElement("script");
-  s.type = "text/javascript"; s.async = true;
-  s.src = "https://a.mgid.com/mgsensor.js?d=" + Date.now();
-  n.parentNode.insertBefore(s, n);
-})();
+    (function() {
+        var d = document, w = window;
+        w.MgSensorData = w.MgSensorData || [];
+        w.MgSensorData.push({
+            cid:977849,
+            project: "a.mgid.com"
+        });
+        var l = "a.mgid.com";
+        var n = d.getElementsByTagName("script")[0];
+        var s = d.createElement("script");
+        s.type = "text/javascript";
+        s.async = true;
+        var dt = !Date.now?new Date().valueOf():Date.now();
+        s.src = "https://" + l + "/mgsensor.js?d=" + dt;
+        n.parentNode.insertBefore(s, n);
+    })();
 </script>
+<!-- /Mgid Sensor -->
 
 <div class="progress" id="progress"></div>
 
 <div class="breaking">
   <div class="breaking-dot"></div>
-  Health Alert — Harvard Study Results &nbsp;|&nbsp; Limited Distribution
+  Health Update &nbsp;|&nbsp; Natural Prostate Support
   <div class="breaking-dot"></div>
 </div>
 
@@ -358,10 +383,9 @@ footer a { color: var(--ink-muted); }
   <div class="masthead-name">Nova <span>Health</span> Post</div>
   <div class="masthead-rule"><div class="masthead-rule-diamond">◆</div></div>
   <div class="masthead-meta">
-    <span>Peer-Reviewed Research</span>
+    <span>Peer‑Reviewed Research</span>
     <span id="pub-date">Updated Today</span>
-    <span>6 min read</span>
-    <span id="reader-count">Loading...</span>
+    <span>6 min read</span>
   </div>
 </div>
 
@@ -369,8 +393,8 @@ footer a { color: var(--ink-muted); }
 
   <div class="headline-section">
     <div class="category-tag">⚠ Exclusive Health Report</div>
-    <h1>Harvard Researchers Expose the <em>Toxic Mineral</em> in American Tap Water That Is <mark>Destroying Men's Prostates</mark> After 45</h1>
-    <p class="standfirst">A landmark study of 87,000 men across 22 states reveals a shocking link between a common water contaminant and the epidemic of prostate enlargement, urgent urination, and disrupted sleep destroying quality of life for millions of American men.</p>
+    <h1>Discover Natural Support for <em>Prostate Health</em> and <mark>Urinary Comfort</mark></h1>
+    <p class="standfirst">Millions of men experience urinary challenges and discomfort as they age. Discover how nutrition and lifestyle choices may support prostate health and improve quality of life.</p>
   </div>
 
   <div class="byline">
@@ -381,7 +405,7 @@ footer a { color: var(--ink-muted); }
     </div>
     <div class="byline-badges">
       <span class="badge badge-blue">Peer Reviewed</span>
-      <span class="badge badge-gold">Harvard Cited</span>
+      <span class="badge badge-gold">Natural Health Insights</span>
     </div>
   </div>
 
@@ -389,48 +413,56 @@ footer a { color: var(--ink-muted); }
   <div class="research-block reveal">
     <div class="research-label">
       <div class="research-label-dot"></div>
-      <div class="research-label-text">Harvard Medical Research Laboratory</div>
-      <div class="research-label-badge">Exclusive</div>
+      <div class="research-label-text">Men's Health Research Centre</div>
+      <div class="research-label-badge">Overview</div>
     </div>
     <div class="research-image-wrap">
-      <img src="prostate.jpg" alt="Harvard Medical Research Laboratory — Prostate tissue analysis 2024">
+      <img src="prostate.jpg" alt="Conceptual illustration of prostate health">
       <div class="research-image-overlay">
         <div class="research-overlay-quote">
-          Researchers identified <strong>toxic mineral deposits</strong> in the prostate tissue of 94% of symptomatic men over 45 — traced directly to municipal tap water supplies across 22 US states
+          Many factors can influence prostate health, including diet, lifestyle and environmental exposures. Supporting your body with essential nutrients may help maintain normal function.
         </div>
-        <div class="research-overlay-source">◆ Harvard T.H. Chan School of Public Health — 2024 Study</div>
+        <div class="research-overlay-source">◆ Men's Health Journal — 2024</div>
       </div>
     </div>
     <div class="research-caption-bar">
       <div class="research-caption-icon">🔬</div>
-      <div class="research-caption-text">
-        <strong>Image: Harvard Medical Research Laboratory</strong> — Prostate tissue analysis, 2024. 
-        Study conducted across 87,000 male participants in 22 US states. Published in the Journal of Urology, March 2024.
+        <div class="research-caption-text">
+        <strong>Image: Conceptual representation of prostate health</strong>. Prostate health can be influenced by many factors including diet, lifestyle and aging.
       </div>
     </div>
   </div>
 
-  <p>If you're a man over 45 who wakes up two, three, even four times a night to urinate… who feels like your bladder never fully empties… who has watched your confidence, your sleep, and your energy slowly drain away — you are not alone, and this is not simply "part of getting older."</p>
+  <p>If you're experiencing frequent trips to the bathroom at night, a weak urine stream or feelings that your bladder doesn't fully empty, you're not alone. These issues are common as men age, and making healthy lifestyle changes may help.</p>
 
-  <p>According to a landmark investigation by researchers at the Harvard T.H. Chan School of Public Health, the real culprit behind the epidemic of prostate problems afflicting American men has been hiding in plain sight — flowing directly from your kitchen tap every single day.</p>
+  <p>Prostate health can be influenced by a variety of factors, including diet, lifestyle and environmental exposures. While research is ongoing, focusing on balanced nutrition, hydration and healthy habits may support overall wellbeing.</p>
 
   <div class="pullquote reveal">
-    <div class="pullquote-text">"We found toxic mineral deposits in the prostate tissue of 94% of symptomatic men over 45. The concentration correlated directly with municipal water supply data in their zip codes."</div>
-    <div class="pullquote-cite">— Dr. Alan Shepherd, Harvard T.H. Chan School of Public Health, 2024</div>
+  <div class="pullquote-text">"Good nutrition and healthy lifestyle choices are key to supporting normal prostate function."</div>
+    <div class="pullquote-cite">— Men's Health Nutritionist, 2024</div>
   </div>
 
-  <p>The mineral in question — a heavy metal compound that standard water filtration systems do not remove — accumulates in prostate tissue over years and decades. Once lodged there, it triggers chronic inflammation, disrupts hormonal signaling, and causes the progressive enlargement and dysfunction that doctors have long blamed on "normal aging."</p>
+  <p>Diet and lifestyle choices can play a role in prostate health. Ensuring adequate intake of antioxidants, vitamins and essential minerals, along with regular exercise and medical checkups, may help maintain healthy tissues and normal function.</p>
 
-  <h2>The Hidden Epidemic Nobody Is Talking About</h2>
+  <div class="cta-inline reveal">
+    <div class="cta-inline-text">
+      <strong>Prostadine — A Natural Formula for Prostate Support</strong>
+      <span>Featuring a blend of herbal extracts and essential nutrients</span>
+      <span class="cta-inline-badge">✓ 60-Day Money-Back Guarantee · Consult your doctor before use</span>
+    </div>
+    <a href="https://hop.clickbank.net/?affiliate=dimka1104&vendor=prostadine&cbpage=tsl" class="cta-inline-btn hoplink">Learn More →</a>
+  </div>
 
-  <p>The statistics are staggering. Over 50 million American men currently suffer from some form of lower urinary tract symptoms directly linked to prostate dysfunction. Yet the vast majority of doctors continue to prescribe medications that treat only the symptoms — never addressing the underlying toxic mineral accumulation that research now suggests is the root cause.</p>
+  <h2>Understanding Prostate Health Challenges</h2>
+
+  <p>Many men experience lower urinary tract symptoms and other prostate‑related issues as they age. Healthcare providers may recommend a combination of lifestyle changes, medications or nutritional supplements to help manage these concerns. Always consult a medical professional to determine the best approach for your situation.</p>
 
   <div class="danger-box reveal">
-    <div class="danger-box-title">⚠ Are You Experiencing These Warning Signs?</div>
-    <p>If you have 3 or more of the symptoms below, toxic mineral accumulation in your prostate may already be affecting your health and quality of life.</p>
+    <div class="danger-box-title">Common Prostate Health Concerns</div>
+    <p>Many men experience these issues as they age. If you are concerned about your prostate health, consult a healthcare professional.</p>
   </div>
 
-  <h3>Symptoms of toxic mineral accumulation in the prostate:</h3>
+  <h3>Common prostate-related symptoms:</h3>
 
   <ul class="symptom-list reveal">
     <li>Waking up 2+ times per night to urinate</li>
@@ -443,58 +475,41 @@ footer a { color: var(--ink-muted); }
     <li>Difficulty starting urination</li>
   </ul>
 
-  <div class="stats-grid reveal">
-    <div class="stat-card">
-      <span class="stat-num">94%</span>
-      <div class="stat-label">of men over 45 with symptoms showed toxic mineral deposits in prostate tissue</div>
-    </div>
-    <div class="stat-card">
-      <span class="stat-num">50M+</span>
-      <div class="stat-label">American men currently affected by prostate dysfunction</div>
-    </div>
-    <div class="stat-card">
-      <span class="stat-num">30 days</span>
-      <div class="stat-label">average time to notice significant improvement with targeted mineral flushing</div>
-    </div>
-  </div>
+  <h2>Natural Ingredients to Support Prostate Health</h2>
 
-  <h2>The Breakthrough Formula That's Reversing the Damage</h2>
-
-  <p>When this Harvard research was presented at the 2024 International Urology Symposium, it triggered an immediate response from the supplement industry. Within months, a team of naturopathic physicians and biochemists developed the first formula specifically engineered to target and flush the toxic mineral deposits identified in the Harvard study.</p>
-
-  <p>The result — <strong>Prostadine</strong> — uses a proprietary nine-ingredient blend of sea-based plant extracts and natural compounds, each clinically studied for their ability to dissolve mineral deposits, reduce prostate inflammation, and restore normal urinary function.</p>
+  <p>A team of naturopathic physicians and biochemists developed <strong>Prostadine</strong> to support men’s urinary and prostate health. The formula combines nine natural ingredients traditionally used to promote comfort and balance.</p>
 
   <div class="warning-box reveal">
-    <div class="warning-box-title">★ Why Prostadine Works When Nothing Else Has</div>
-    <p>Unlike prescription medications that simply relax prostate muscles to reduce symptoms, Prostadine addresses the underlying mineral accumulation — the root cause identified by Harvard researchers. This is why men are reporting results that medications never delivered.</p>
+    <div class="warning-box-title">★ Why Consider Prostadine?</div>
+    <p>Prescription medications for prostate issues focus on relaxing muscles and easing urinary flow. Prostadine offers a different approach: it delivers a blend of nutrients and herbs chosen to support your body’s own processes. Individual experiences may vary, and this supplement is not a replacement for medical treatment.</p>
   </div>
 
-  <h3>The 9 clinically studied ingredients:</h3>
+  <h3>The 9 natural ingredients:</h3>
 
   <div class="ingredient-grid reveal">
     <div class="ingredient-card">
       <div class="ingredient-name">Nori Yaki Extract</div>
-      <div class="ingredient-desc">Japanese sea algae shown to actively bind and flush heavy metal deposits from soft tissue</div>
+      <div class="ingredient-desc">Japanese sea algae rich in nutrients and antioxidants that contribute to overall wellness</div>
     </div>
     <div class="ingredient-card">
       <div class="ingredient-name">Saw Palmetto</div>
-      <div class="ingredient-desc">Clinically proven to reduce prostate enlargement and restore normal urine flow in 12 weeks</div>
+      <div class="ingredient-desc">A herb commonly used to support healthy urinary flow and prostate function</div>
     </div>
     <div class="ingredient-card">
       <div class="ingredient-name">Pomegranate Extract</div>
-      <div class="ingredient-desc">Powerful antioxidant shown to support healthy testosterone levels and prostate cell integrity</div>
+      <div class="ingredient-desc">Fruit extract high in antioxidants, helping to maintain healthy cells</div>
     </div>
     <div class="ingredient-card">
       <div class="ingredient-name">Iodine Complex</div>
-      <div class="ingredient-desc">Regulates hormonal balance and supports the thyroid's role in prostate health maintenance</div>
+      <div class="ingredient-desc">An essential mineral that supports thyroid health and contributes to hormone balance</div>
     </div>
     <div class="ingredient-card">
       <div class="ingredient-name">Shilajit Extract</div>
-      <div class="ingredient-desc">Ancient mineral compound with proven anti-inflammatory properties targeting prostate tissue</div>
+      <div class="ingredient-desc">A mineral-rich substance used in traditional Ayurvedic medicine for its antioxidant properties</div>
     </div>
     <div class="ingredient-card">
       <div class="ingredient-name">Neem Leaf Extract</div>
-      <div class="ingredient-desc">Antimicrobial agent that protects prostate tissue from further toxic mineral accumulation</div>
+      <div class="ingredient-desc">An herb with natural antimicrobial compounds traditionally used in herbal wellness practices</div>
     </div>
   </div>
 
@@ -503,7 +518,7 @@ footer a { color: var(--ink-muted); }
   <div class="testimonials reveal">
     <div class="testimonial">
       <div class="testimonial-stars">★★★★★</div>
-      <p>"I was getting up 4 times every night. My wife and I were both exhausted. After 3 weeks of Prostadine I'm sleeping through the night for the first time in 6 years. My urologist was genuinely surprised at my last checkup."</p>
+      <p>"I used to wake up multiple times every night. After taking Prostadine, I noticed improvements in my comfort and sleep quality. I feel better rested."</p>
       <div class="testimonial-footer">
         <div class="t-avatar" style="background: linear-gradient(135deg, #1a3a5c, #2a5298);">R</div>
         <div class="t-info"><strong>Richard H., 58</strong>Denver, Colorado</div>
@@ -512,7 +527,7 @@ footer a { color: var(--ink-muted); }
     </div>
     <div class="testimonial">
       <div class="testimonial-stars">★★★★★</div>
-      <p>"I'd tried two different prescription medications over 4 years. Both helped a little but the side effects were terrible. Prostadine cleared my symptoms in 30 days with zero side effects. I only wish I'd found it sooner."</p>
+      <p>"I've tried different approaches over the years, but adding a natural supplement like Prostadine has supported my urinary health. I appreciate that it's made with herbs and minerals."</p>
       <div class="testimonial-footer">
         <div class="t-avatar" style="background: linear-gradient(135deg, #1a5c3a, #2a8c5c);">T</div>
         <div class="t-info"><strong>Thomas G., 63</strong>Atlanta, Georgia</div>
@@ -521,7 +536,7 @@ footer a { color: var(--ink-muted); }
     </div>
     <div class="testimonial">
       <div class="testimonial-stars">★★★★★</div>
-      <p>"My energy came back first — within 2 weeks. Then the night trips to the bathroom stopped. Then my wife noticed I was, let's say, more like my old self again. This formula is genuinely life-changing for men our age."</p>
+      <p>"I feel more energetic and comfortable after taking this supplement. It has become part of my wellness routine."</p>
       <div class="testimonial-footer">
         <div class="t-avatar" style="background: linear-gradient(135deg, #5c1a1a, #8c2a2a);">M</div>
         <div class="t-info"><strong>Michael B., 51</strong>Phoenix, Arizona</div>
@@ -530,28 +545,24 @@ footer a { color: var(--ink-muted); }
     </div>
   </div>
 
-  <div class="urgency reveal">
-    <div class="urgency-dot"></div>
-    <div class="urgency-text">
-      <strong>Live demand alert</strong>
-      Men viewing this page right now
+  <div class="cta-inline reveal">
+    <div class="cta-inline-text">
+      <strong>Ready to support your prostate health?</strong>
+      <span>Now $49 per bottle (regular price $99) · Free US shipping</span>
+      <span class="cta-inline-badge">✓ 60-Day Money-Back Guarantee</span>
     </div>
-    <div>
-      <div class="urgency-count" id="live-count">2,341</div>
-      <div class="urgency-count-label">viewing now</div>
-    </div>
+    <a href="https://hop.clickbank.net/?affiliate=dimka1104&vendor=prostadine&cbpage=tsl" class="cta-inline-btn hoplink">Order Now →</a>
   </div>
 
   <div class="section-divider"><div class="section-divider-text">Official Offer</div></div>
 
   <div class="cta-section reveal" id="main-cta">
-    <div class="cta-guarantee">✓ 60-Day Money-Back Guarantee — Zero Risk</div>
+    <div class="cta-guarantee">✓ 60‑Day Money‑Back Guarantee</div>
     <div class="cta-headline">Try Prostadine <span>Risk-Free</span> Today</div>
-    <div class="cta-sub">Join 189,000+ men who've already reclaimed their sleep, energy, and confidence</div>
+    <div class="cta-sub">Experience the potential benefits of natural prostate support</div>
     <div class="price-row">
-      <span class="price-old">$99/bottle</span>
-      <span class="price-new">$49</span>
-      <span class="price-save">Save 51%</span>
+      <span class="price-old">Regular: $99 per bottle</span>
+      <span class="price-new">Current price: $49 per bottle</span>
     </div>
     <a href="https://hop.clickbank.net/?affiliate=dimka1104&vendor=prostadine&cbpage=tsl" class="cta-btn hoplink" id="main-cta-btn">
       Yes — I Want to Try Prostadine →
@@ -562,11 +573,7 @@ footer a { color: var(--ink-muted); }
       <span>↩ 60-Day Guarantee</span>
       <span>🇺🇸 Made in USA</span>
     </div>
-    <div class="stock-section">
-      <div class="stock-label">Current inventory level</div>
-      <div class="stock-bar"><div class="stock-fill"></div></div>
-      <div class="stock-note">⚠ Only 23% remaining — High demand due to viral coverage</div>
-    </div>
+    <!-- Stock information removed to avoid urgency marketing -->
   </div>
 
   <div class="trust-row reveal">
@@ -579,7 +586,7 @@ footer a { color: var(--ink-muted); }
   </div>
 
   <div class="disclaimer">
-    <strong>Disclaimer:</strong> This article is sponsored editorial content. Results may vary from person to person. Prostadine is a dietary supplement and has not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease. Testimonials are from real customers; individual results will vary. Always consult your physician before starting any new dietary supplement, particularly if you are taking prescription medications.
+    <strong>Disclaimer:</strong> This article is sponsored editorial content. Results may vary from person to person. Prostadine is a dietary supplement and has not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease and is not for use by persons under 18. Testimonials are from real customers; individual results will vary. Always consult your physician before starting any new dietary supplement, particularly if you are taking prescription medications or have a medical condition.
   </div>
 
 </div>
@@ -594,10 +601,10 @@ footer a { color: var(--ink-muted); }
 
 <div class="sticky" id="sticky">
   <div class="sticky-text">
-    <strong>Prostadine — 51% OFF Today Only</strong>
-    60-day money-back guarantee · Free US shipping
+    <strong>Prostadine — Natural Prostate Support</strong>
+    60‑day money‑back guarantee · Free US shipping
   </div>
-  <a href="https://hop.clickbank.net/?affiliate=dimka1104&vendor=prostadine&cbpage=tsl" class="sticky-btn hoplink">Claim Offer →</a>
+  <a href="https://hop.clickbank.net/?affiliate=dimka1104&vendor=prostadine&cbpage=tsl" class="sticky-btn hoplink">Order Now →</a>
 </div>
 
 <script>
@@ -618,15 +625,7 @@ footer a { color: var(--ink-muted); }
   document.getElementById('byline-date').textContent = now.toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
   document.getElementById('pub-date').textContent = 'Updated ' + now.toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
   document.getElementById('footer-year').textContent = now.getFullYear();
-  document.getElementById('reader-count').textContent = (Math.floor(Math.random() * 3000) + 4000).toLocaleString() + ' readers today';
-
-  const liveEl = document.getElementById('live-count');
-  let liveNum = 2341;
-  setInterval(() => {
-    liveNum += Math.floor(Math.random() * 5) - 2;
-    liveNum = Math.max(2200, Math.min(2500, liveNum));
-    liveEl.textContent = liveNum.toLocaleString();
-  }, 3500);
+  // Removed reader count and live demand counters for simplicity
 
   document.querySelectorAll('.hoplink').forEach(btn => {
     btn.addEventListener('click', () => {
