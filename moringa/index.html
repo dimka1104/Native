@@ -1,0 +1,1477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Natural Daily Support with Moringa</title>
+<meta name="description" content="Learn how Moringa oleifera may support daily energy, digestion, antioxidant protection, and overall wellness.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Barlow:wght@300;400;500;600&family=Barlow+Condensed:wght@600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --forest: #10281b;
+  --forest-mid: #193c2a;
+  --forest-light: #245c3a;
+  --leaf: #2f8f4e;
+  --leaf-light: #61b86f;
+  --mint: #dff4e3;
+  --gold: #c9a84c;
+  --gold-light: #f0c96e;
+  --cream: #f8f4ee;
+  --paper: #fffaf3;
+  --ink: #1a1a2e;
+  --ink-soft: #2d4636;
+  --ink-muted: #6f7f72;
+  --red: #b94535;
+  --green: #1a7a4a;
+  --border: rgba(16,40,27,0.12);
+  --shadow-lg: 0 20px 60px rgba(16,40,27,0.16);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Barlow', sans-serif;
+  background: var(--paper);
+  color: var(--ink);
+  font-size: 17px;
+  line-height: 1.8;
+  -webkit-font-smoothing: antialiased;
+}
+
+.progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 0%;
+  background: linear-gradient(90deg, var(--leaf), var(--leaf-light), var(--gold));
+  z-index: 999;
+  transition: width .1s linear;
+}
+
+.breaking {
+  background: var(--forest-light);
+  color: white;
+  text-align: center;
+  padding: 10px 20px;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 14px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.breaking-dot {
+  width: 8px;
+  height: 8px;
+  background: rgba(255,255,255,0.65);
+  border-radius: 50%;
+  animation: pulse-dot 1.2s ease-in-out infinite;
+  flex-shrink: 0;
+}
+
+@keyframes pulse-dot {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.4); opacity: .6; }
+}
+
+.masthead {
+  background: var(--forest);
+  padding: 20px;
+  text-align: center;
+  border-bottom: 3px solid var(--gold);
+  position: relative;
+  overflow: hidden;
+}
+
+.masthead::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(97,184,111,0.12), transparent 28%),
+    radial-gradient(circle at 80% 10%, rgba(201,168,76,0.10), transparent 24%),
+    repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(255,255,255,0.015) 2px, rgba(255,255,255,0.015) 4px);
+}
+
+.masthead-eyebrow {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 11px;
+  letter-spacing: .3em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 8px;
+  position: relative;
+}
+
+.masthead-name {
+  font-family: 'Bitter', serif;
+  font-size: clamp(26px, 6vw, 46px);
+  font-weight: 900;
+  color: white;
+  letter-spacing: -.02em;
+  position: relative;
+}
+
+.masthead-name span { color: var(--gold); }
+
+.masthead-rule {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin: 10px 0 8px;
+  position: relative;
+}
+
+.masthead-rule::before {
+  content: '';
+  flex: 1;
+  max-width: 120px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold));
+}
+
+.masthead-rule::after {
+  content: '';
+  flex: 1;
+  max-width: 120px;
+  height: 1px;
+  background: linear-gradient(90deg, var(--gold), transparent);
+}
+
+.masthead-rule-diamond {
+  color: var(--gold);
+  font-size: 10px;
+}
+
+.masthead-meta {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  font-family: 'Barlow', sans-serif;
+  font-size: 11px;
+  color: rgba(255,255,255,0.55);
+  letter-spacing: .05em;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.article {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 20px 80px;
+}
+
+.headline-section {
+  padding: 44px 0 32px;
+  border-bottom: 1px solid var(--border);
+}
+
+.category-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--forest);
+  color: var(--gold);
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  padding: 5px 12px;
+  border-radius: 2px;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-family: 'Bitter', serif;
+  font-size: clamp(30px, 6vw, 52px);
+  font-weight: 900;
+  line-height: 1.1;
+  color: var(--forest);
+  letter-spacing: -.02em;
+  margin-bottom: 20px;
+}
+
+h1 em {
+  font-style: italic;
+  color: var(--leaf);
+}
+
+h1 mark {
+  background: none;
+  color: var(--red);
+  font-style: normal;
+}
+
+.standfirst {
+  font-size: clamp(17px, 2.5vw, 20px);
+  color: var(--ink-soft);
+  line-height: 1.6;
+  font-weight: 300;
+  border-left: 4px solid var(--gold);
+  padding-left: 20px;
+}
+
+.hero-cta {
+  margin: 26px 0 0;
+  padding: 20px 22px;
+  border-radius: 12px;
+  background: rgba(250,250,250,0.96);
+  text-align: center;
+  border: 1px solid rgba(16,40,27,0.08);
+}
+
+.hero-cta-copy {
+  margin: 0 0 14px;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.6;
+  color: var(--forest);
+}
+
+.hero-cta-btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background: transparent;
+  color: var(--forest);
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 999px;
+  border: 1px solid var(--forest);
+  transition: transform .15s, background .15s, color .15s;
+}
+
+.hero-cta-btn:hover {
+  transform: translateY(-1px);
+  background: var(--forest);
+  color: white;
+}
+
+.byline {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 18px 0;
+  border-bottom: 1px solid var(--border);
+  flex-wrap: wrap;
+}
+
+.byline-avatar {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--leaf), var(--forest));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-family: 'Bitter', serif;
+  font-weight: 700;
+  font-size: 18px;
+  flex-shrink: 0;
+  border: 2px solid var(--gold);
+}
+
+.byline-info {
+  font-size: 13px;
+  color: var(--ink-muted);
+}
+
+.byline-info strong {
+  color: var(--forest);
+  font-weight: 600;
+  display: block;
+}
+
+.byline-badges {
+  margin-left: auto;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.badge {
+  font-size: 11px;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 2px;
+  border: 1px solid;
+}
+
+.badge-green {
+  color: var(--leaf);
+  border-color: var(--leaf);
+  background: rgba(47,143,78,0.07);
+}
+
+.badge-gold {
+  color: var(--gold);
+  border-color: var(--gold);
+  background: rgba(201,168,76,0.07);
+}
+
+.research-block {
+  margin: 36px 0;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 8px 40px rgba(16,40,27,0.18);
+  border: 1px solid rgba(16,40,27,0.08);
+  position: relative;
+}
+
+.research-label {
+  background: var(--forest);
+  padding: 10px 18px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.research-label-dot {
+  width: 8px;
+  height: 8px;
+  background: var(--gold);
+  border-radius: 50%;
+  flex-shrink: 0;
+  animation: pulse-dot 2s ease-in-out infinite;
+}
+
+.research-label-text {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.research-label-badge {
+  margin-left: auto;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.45);
+  border: 1px solid rgba(255,255,255,0.15);
+  padding: 3px 8px;
+  border-radius: 2px;
+}
+
+.research-image-wrap {
+  position: relative;
+  overflow: hidden;
+  background: var(--forest-mid);
+}
+
+.research-image-wrap img {
+  width: 100%;
+  max-height: 420px;
+  object-fit: cover;
+  display: block;
+  transition: transform .6s ease;
+}
+
+.research-image-wrap:hover img { transform: scale(1.02); }
+
+.research-image-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(16,40,27,0.94) 0%, rgba(16,40,27,0.48) 62%, transparent 100%);
+  padding: 32px 24px 20px;
+}
+
+.research-overlay-quote {
+  font-family: 'Bitter', serif;
+  font-size: clamp(14px, 2.5vw, 17px);
+  font-style: italic;
+  color: rgba(255,255,255,0.93);
+  line-height: 1.55;
+  margin-bottom: 10px;
+}
+
+.research-overlay-quote strong {
+  color: var(--gold-light);
+  font-style: normal;
+}
+
+.research-overlay-source {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 11px;
+  color: var(--gold);
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.research-caption-bar {
+  background: #eef5ee;
+  border-top: 1px solid #d8e4d8;
+  padding: 12px 18px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.research-caption-icon {
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.research-caption-text {
+  font-size: 12px;
+  color: #5e6f60;
+  font-style: italic;
+  line-height: 1.5;
+}
+
+.research-caption-text strong {
+  color: var(--forest);
+  font-style: normal;
+  font-weight: 600;
+}
+
+.article p {
+  margin-bottom: 24px;
+  color: #2a3b31;
+}
+
+.article > p:first-of-type::first-letter {
+  font-family: 'Bitter', serif;
+  font-size: 80px;
+  font-weight: 900;
+  float: left;
+  line-height: .75;
+  margin: 8px 10px 0 0;
+  color: var(--leaf);
+}
+
+h2 {
+  font-family: 'Bitter', serif;
+  font-size: clamp(22px, 4vw, 32px);
+  font-weight: 700;
+  color: var(--forest);
+  margin: 44px 0 16px;
+  line-height: 1.2;
+  padding-bottom: 12px;
+  border-bottom: 2px solid var(--border);
+}
+
+h3 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--leaf);
+  margin: 32px 0 12px;
+}
+
+.pullquote {
+  margin: 40px -20px;
+  padding: 36px 40px;
+  background: var(--forest);
+  position: relative;
+  overflow: hidden;
+}
+
+.pullquote::before {
+  content: '"';
+  font-family: 'Bitter', serif;
+  font-size: 200px;
+  color: var(--leaf);
+  position: absolute;
+  top: -40px;
+  left: 20px;
+  line-height: 1;
+  opacity: .15;
+}
+
+.pullquote::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(180deg, var(--gold), var(--leaf-light));
+}
+
+.pullquote-text {
+  font-family: 'Bitter', serif;
+  font-size: clamp(18px, 3vw, 24px);
+  font-style: italic;
+  font-weight: 700;
+  color: white;
+  line-height: 1.45;
+  position: relative;
+  margin-bottom: 14px;
+}
+
+.pullquote-cite {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 13px;
+  color: var(--gold);
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  font-weight: 600;
+  position: relative;
+}
+
+.warning-box {
+  background: #fff8e7;
+  border: 1px solid rgba(201,168,76,0.3);
+  border-left: 5px solid var(--gold);
+  border-radius: 0 4px 4px 0;
+  padding: 22px 26px;
+  margin: 32px 0;
+}
+
+.warning-box-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 8px;
+}
+
+.warning-box p {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 16px;
+}
+
+.warning-box p::first-letter { all: unset; }
+
+.danger-box {
+  background: #f2fbf3;
+  border: 1px solid rgba(47,143,78,0.18);
+  border-left: 5px solid var(--leaf);
+  border-radius: 0 4px 4px 0;
+  padding: 22px 26px;
+  margin: 32px 0;
+}
+
+.danger-box-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+  color: var(--leaf);
+  margin-bottom: 8px;
+}
+
+.danger-box p {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 16px;
+}
+
+.danger-box p::first-letter { all: unset; }
+
+.symptom-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin: 20px 0 32px;
+}
+
+.symptom-list li {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  padding: 11px 14px;
+  font-size: 14px;
+  color: var(--ink-soft);
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-family: 'Barlow', sans-serif;
+  transition: border-color .2s;
+}
+
+.symptom-list li:hover { border-color: var(--leaf-light); }
+
+.symptom-list li::before {
+  content: '✓';
+  color: var(--leaf);
+  font-size: 13px;
+  flex-shrink: 0;
+  margin-top: 1px;
+  font-weight: 700;
+}
+
+.ingredient-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin: 20px 0 32px;
+}
+
+.ingredient-card {
+  background: white;
+  border: 1px solid var(--border);
+  border-top: 3px solid var(--leaf);
+  border-radius: 0 0 4px 4px;
+  padding: 16px;
+}
+
+.ingredient-name {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--forest);
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+.ingredient-desc {
+  font-size: 13px;
+  color: var(--ink-muted);
+  line-height: 1.5;
+}
+
+.testimonials {
+  margin: 40px 0;
+  display: grid;
+  gap: 16px;
+}
+
+.testimonial {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 24px;
+  position: relative;
+  overflow: hidden;
+}
+
+.testimonial::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, var(--leaf), var(--gold));
+}
+
+.testimonial-stars {
+  color: var(--gold);
+  font-size: 15px;
+  letter-spacing: 3px;
+  margin-bottom: 12px;
+}
+
+.testimonial p {
+  font-style: italic;
+  color: var(--ink-soft);
+  margin: 0 0 14px;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.testimonial p::first-letter { all: unset; }
+
+.testimonial-footer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.t-avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 15px;
+  color: white;
+  flex-shrink: 0;
+}
+
+.t-info {
+  font-size: 13px;
+  font-family: 'Barlow', sans-serif;
+  color: var(--ink-muted);
+}
+
+.t-info strong {
+  color: var(--forest);
+  display: block;
+  font-weight: 600;
+}
+
+.verified {
+  margin-left: auto;
+  font-size: 11px;
+  color: var(--green);
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.cta-inline {
+  background: rgba(250,247,238,0.96);
+  border: 1px solid rgba(16,40,27,0.08);
+  border-radius: 8px;
+  padding: 24px 28px;
+  margin: 36px 0;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.cta-inline-text {
+  flex: 1;
+  min-width: 200px;
+}
+
+.cta-inline-text strong {
+  font-family: 'Bitter', serif;
+  font-size: clamp(16px, 2.5vw, 20px);
+  color: var(--forest);
+  display: block;
+  margin-bottom: 4px;
+}
+
+.cta-inline-text span {
+  font-size: 14px;
+  color: var(--ink-soft);
+}
+
+.cta-inline-badge {
+  font-size: 11px;
+  color: var(--green);
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  margin-top: 6px;
+  display: block;
+}
+
+.cta-inline-btn {
+  flex-shrink: 0;
+  display: inline-block;
+  padding: 14px 26px;
+  background: var(--forest);
+  color: white;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(16,40,27,0.14);
+  transition: transform .15s, box-shadow .15s, background .15s;
+  white-space: nowrap;
+}
+
+.cta-inline-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 22px rgba(16,40,27,0.20);
+  background: var(--leaf);
+}
+
+.steps-block {
+  margin: 36px 0;
+  padding: 24px 26px;
+  border-radius: 10px;
+  background: white;
+  border: 1px solid var(--border);
+}
+
+.steps-block h3 {
+  font-family: 'Bitter', serif;
+  font-size: clamp(20px, 3vw, 24px);
+  color: var(--forest);
+  margin-bottom: 18px;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.step-card {
+  background: var(--mint);
+  border-radius: 8px;
+  padding: 18px;
+  text-align: center;
+  border: 1px solid rgba(16,40,27,0.08);
+}
+
+.step-number {
+  width: 34px;
+  height: 34px;
+  margin: 0 auto 12px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--gold);
+  color: var(--forest);
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.step-title {
+  font-family: 'Bitter', serif;
+  font-size: 16px;
+  color: var(--forest);
+  margin-bottom: 10px;
+}
+
+.step-desc {
+  font-size: 14px;
+  color: var(--ink-soft);
+  line-height: 1.6;
+}
+
+.cta-mid {
+  background: var(--mint);
+  border: 2px solid var(--gold);
+  border-radius: 6px;
+  padding: 28px 28px;
+  margin: 40px 0;
+  text-align: center;
+}
+
+.cta-mid-headline {
+  font-family: 'Bitter', serif;
+  font-size: clamp(18px, 3vw, 24px);
+  font-weight: 700;
+  color: var(--forest);
+  margin-bottom: 8px;
+}
+
+.cta-mid-headline span {
+  color: var(--leaf);
+}
+
+.cta-mid-sub {
+  font-size: 15px;
+  color: var(--ink-soft);
+  margin-bottom: 20px;
+}
+
+.cta-mid-btn {
+  display: inline-block;
+  padding: 16px 36px;
+  background: linear-gradient(135deg, var(--leaf), var(--leaf-light));
+  color: white;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 17px;
+  font-weight: 800;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 0 6px 24px rgba(47,143,78,0.35);
+  transition: transform .15s, box-shadow .15s;
+}
+
+.cta-mid-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 32px rgba(47,143,78,0.48);
+}
+
+.cta-mid-note {
+  font-size: 12px;
+  color: var(--ink-muted);
+  margin-top: 12px;
+}
+
+.trust-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+  margin: 36px 0;
+  flex-wrap: wrap;
+}
+
+.trust-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  text-align: center;
+}
+
+.trust-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: var(--forest);
+  border: 2px solid var(--leaf);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+}
+
+.trust-label {
+  font-size: 10px;
+  color: var(--ink-muted);
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  line-height: 1.3;
+}
+
+.disclaimer {
+  border-top: 1px solid var(--border);
+  padding-top: 20px;
+  margin-top: 36px;
+  font-size: 12px;
+  color: var(--ink-muted);
+  line-height: 1.7;
+  font-style: italic;
+  font-family: 'Barlow', sans-serif;
+}
+
+footer {
+  border-top: 1px solid var(--border);
+  padding: 28px 20px;
+  text-align: center;
+  font-family: 'Barlow', sans-serif;
+  font-size: 12px;
+  color: var(--ink-muted);
+  line-height: 1.8;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+footer a {
+  color: var(--ink-muted);
+}
+
+.bottom-cta {
+  position: fixed;
+  left: 50%;
+  bottom: 22px;
+  transform: translateX(-50%) translateY(120%);
+  opacity: 0;
+  pointer-events: none;
+  transition: transform .35s ease, opacity .35s ease;
+  z-index: 1000;
+}
+
+.bottom-cta.show {
+  transform: translateX(-50%) translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.bottom-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 210px;
+  padding: 14px 24px;
+  background: var(--forest);
+  color: white;
+  text-decoration: none;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  border-radius: 999px;
+  box-shadow: 0 16px 38px rgba(16,40,27,0.22);
+  border: 1px solid rgba(255,255,255,0.12);
+}
+
+.bottom-cta-btn:hover {
+  transform: translateY(-1px);
+  background: var(--leaf);
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .7s ease, transform .7s ease;
+}
+
+.reveal.in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 600px) {
+  .symptom-list,
+  .ingredient-grid,
+  .steps-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pullquote {
+    margin: 36px -20px;
+    padding: 28px 24px;
+  }
+
+  .byline-badges {
+    display: none;
+  }
+
+  .research-overlay-quote {
+    font-size: 13px;
+  }
+
+  .cta-inline {
+    padding: 22px 20px;
+  }
+
+  .cta-inline-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- Mgid Sensor -->
+<script type="text/javascript">
+(function() {
+  var d = document, w = window;
+  w.MgSensorData = w.MgSensorData || [];
+  w.MgSensorData.push({
+    cid: 977849,
+    project: "a.mgid.com"
+  });
+  var l = "a.mgid.com";
+  var n = d.getElementsByTagName("script")[0];
+  var s = d.createElement("script");
+  s.type = "text/javascript";
+  s.async = true;
+  var dt = !Date.now ? new Date().valueOf() : Date.now();
+  s.src = "https://" + l + "/mgsensor.js?d=" + dt;
+  n.parentNode.insertBefore(s, n);
+})();
+</script>
+<!-- /Mgid Sensor -->
+
+<div class="progress" id="progress"></div>
+
+<div class="breaking">
+  <div class="breaking-dot"></div>
+  Wellness Update &nbsp;|&nbsp; Natural Moringa Support
+  <div class="breaking-dot"></div>
+</div>
+
+<div class="masthead">
+  <div class="masthead-eyebrow">Independent Natural Health Intelligence</div>
+  <div class="masthead-name">Nova <span>Health</span> Post</div>
+  <div class="masthead-rule"><div class="masthead-rule-diamond">◆</div></div>
+  <div class="masthead-meta">
+    <span>Plant-Based Wellness</span>
+    <span id="pub-date">Updated Today</span>
+    <span>6 min read</span>
+  </div>
+</div>
+
+<div class="article">
+
+  <div class="headline-section">
+    <div class="category-tag">🌿 Exclusive Wellness Report</div>
+
+    <h1>The Ancient “Miracle Tree” Now Getting Attention for <em>Daily Energy</em> and <mark>Whole-Body Wellness</mark></h1>
+
+    <p class="standfirst">
+      Many adults are searching for a cleaner way to support energy, digestion, and overall vitality without relying on more caffeine or complicated supplement stacks. Moringa oleifera may be one of the simplest natural options.
+    </p>
+
+    <div class="hero-cta reveal">
+      <p class="hero-cta-copy">
+        After reading, you can review the ingredient profile, usage summary, and official Moringa Magic details.
+      </p>
+      <a href="https://www.moringa-magic.com/?hopId=d17d12d6-4aad-461b-8333-396a6d5f76c2" class="hero-cta-btn hoplink" target="_blank" rel="nofollow noopener noreferrer">
+        Read more
+      </a>
+    </div>
+  </div>
+
+  <div class="byline">
+    <div class="byline-avatar">N</div>
+    <div class="byline-info">
+      <strong>Nova Health Editorial Desk</strong>
+      Natural Wellness Research &nbsp;|&nbsp; <span id="byline-date"></span>
+    </div>
+    <div class="byline-badges">
+      <span class="badge badge-green">Plant-Based</span>
+      <span class="badge badge-gold">Natural Health Insights</span>
+    </div>
+  </div>
+
+  <div class="research-block reveal">
+    <div class="research-label">
+      <div class="research-label-dot"></div>
+      <div class="research-label-text">Botanical Wellness Review</div>
+      <div class="research-label-badge">Overview</div>
+    </div>
+
+    <div class="research-image-wrap">
+      <img src="moringa.jpg" alt="Fresh moringa leaves and botanical wellness concept">
+
+      <div class="research-image-overlay">
+        <div class="research-overlay-quote">
+          Moringa oleifera leaves are naturally rich in plant nutrients, antioxidants, minerals, and phytonutrients that may support everyday wellness when combined with healthy habits.
+        </div>
+        <div class="research-overlay-source">◆ Botanical Nutrition Review — 2026</div>
+      </div>
+    </div>
+
+    <div class="research-caption-bar">
+      <div class="research-caption-icon">🌿</div>
+      <div class="research-caption-text">
+        <strong>Image: Moringa oleifera leaves.</strong> Moringa is often called the “Miracle Tree” because of its nutrient-dense leaves and long history of traditional use.
+      </div>
+    </div>
+  </div>
+
+  <p>
+    If you often feel drained in the afternoon, struggle to stay consistent with healthy eating, or simply want a cleaner daily wellness habit, you are not alone. Many people try coffee, energy drinks, or complicated supplement routines — but those approaches are not always sustainable.
+  </p>
+
+  <p>
+    This is why moringa has gained attention. The leaves of the Moringa oleifera tree naturally contain vitamins, minerals, amino acids, and antioxidant plant compounds. Instead of acting like a stimulant, moringa is usually positioned as daily nutritional support.
+  </p>
+
+  <div class="pullquote reveal">
+    <div class="pullquote-text">
+      “The strongest daily wellness habits are often simple, consistent, and built around real nutrition.”
+    </div>
+    <div class="pullquote-cite">— Natural Nutrition Review</div>
+  </div>
+
+  <p>
+    Moringa Magic was created around this simple idea: deliver pure moringa leaf powder in an easy capsule format, without requiring powders, smoothies, or complicated preparation.
+  </p>
+
+  <div class="cta-inline reveal">
+    <div class="cta-inline-text">
+      <strong>Moringa Magic — Simple Daily Moringa Support</strong>
+      <span>Made with pure Moringa oleifera leaf powder for plant-based daily wellness</span>
+      <span class="cta-inline-badge">✓ 60-Day Money-Back Guarantee · Consult your doctor before use</span>
+    </div>
+    <a href="https://www.moringa-magic.com/?hopId=d17d12d6-4aad-461b-8333-396a6d5f76c2" class="cta-inline-btn hoplink" target="_blank" rel="nofollow noopener noreferrer">
+      Learn more →
+    </a>
+  </div>
+
+  <h2>Why Moringa Is Becoming Popular Again</h2>
+
+  <p>
+    Moringa oleifera is a tree native to parts of India and other warm regions. Its leaves have been used in traditional wellness practices for generations, mainly because they are naturally nutrient-dense.
+  </p>
+
+  <div class="danger-box reveal">
+    <div class="danger-box-title">Modern Wellness Concern</div>
+    <p>
+      Many adults do not get enough nutrient-rich greens consistently. A simple plant-based supplement may help support a healthier routine, but it should not replace balanced meals or medical care.
+    </p>
+  </div>
+
+  <h3>People usually consider moringa for support with:</h3>
+
+  <ul class="symptom-list reveal">
+    <li>Daily energy and vitality</li>
+    <li>Antioxidant protection</li>
+    <li>Digestive balance</li>
+    <li>Immune system support</li>
+    <li>Healthy metabolism habits</li>
+    <li>Skin and hair wellness</li>
+    <li>Clean plant-based nutrition</li>
+    <li>Reducing reliance on stimulant-style energy products</li>
+  </ul>
+
+  <h2>What Makes Moringa Magic Different?</h2>
+
+  <p>
+    Many supplements use long blends, artificial additives, or ingredients that are difficult to understand. Moringa Magic keeps the positioning simple: a clean moringa-based formula designed for everyday use.
+  </p>
+
+  <div class="warning-box reveal">
+    <div class="warning-box-title">★ Why Consider Moringa Magic?</div>
+    <p>
+      Moringa Magic is built around Moringa oleifera leaf powder, a plant source known for its natural nutritional profile. It is designed for people who want a simple daily wellness formula rather than a harsh stimulant or complicated supplement stack. Individual results vary.
+    </p>
+  </div>
+
+  <h3>Key natural nutrition highlights:</h3>
+
+  <div class="ingredient-grid reveal">
+    <div class="ingredient-card">
+      <div class="ingredient-name">Moringa Oleifera Leaf</div>
+      <div class="ingredient-desc">A nutrient-dense botanical leaf traditionally used to support overall wellness and vitality</div>
+    </div>
+
+    <div class="ingredient-card">
+      <div class="ingredient-name">Antioxidant Compounds</div>
+      <div class="ingredient-desc">Moringa naturally contains plant compounds such as polyphenols that help support cellular wellness</div>
+    </div>
+
+    <div class="ingredient-card">
+      <div class="ingredient-name">Vitamins & Minerals</div>
+      <div class="ingredient-desc">Moringa leaves naturally contain vitamins and minerals that contribute to everyday nutritional support</div>
+    </div>
+
+    <div class="ingredient-card">
+      <div class="ingredient-name">Plant-Based Profile</div>
+      <div class="ingredient-desc">A clean botanical option for people looking for simple daily nutrition from a natural source</div>
+    </div>
+
+    <div class="ingredient-card">
+      <div class="ingredient-name">No Complicated Blend</div>
+      <div class="ingredient-desc">The product is positioned around moringa rather than a long list of confusing synthetic ingredients</div>
+    </div>
+
+    <div class="ingredient-card">
+      <div class="ingredient-name">Capsule Convenience</div>
+      <div class="ingredient-desc">Designed to make moringa easier to use daily without mixing powders or preparing drinks</div>
+    </div>
+  </div>
+
+  <div class="steps-block reveal">
+    <h3>How a Simple Moringa Routine Fits Into the Day</h3>
+
+    <div class="steps-grid">
+      <div class="step-card">
+        <div class="step-number">1</div>
+        <div class="step-title">Take Daily</div>
+        <div class="step-desc">Use consistently according to the product label and your healthcare provider’s guidance.</div>
+      </div>
+
+      <div class="step-card">
+        <div class="step-number">2</div>
+        <div class="step-title">Support Nutrition</div>
+        <div class="step-desc">Combine with real meals, hydration, sleep, and movement for better daily wellness habits.</div>
+      </div>
+
+      <div class="step-card">
+        <div class="step-number">3</div>
+        <div class="step-title">Stay Consistent</div>
+        <div class="step-desc">Plant-based support is usually gradual, so consistency matters more than expecting instant results.</div>
+      </div>
+    </div>
+  </div>
+
+  <h2>What Real Users Often Report</h2>
+
+  <div class="testimonials reveal">
+    <div class="testimonial">
+      <div class="testimonial-stars">★★★★★</div>
+      <p>
+        “I wanted something simple for my morning routine. After using Moringa Magic consistently, I feel like my daily energy is more stable.”
+      </p>
+      <div class="testimonial-footer">
+        <div class="t-avatar" style="background: linear-gradient(135deg, #245c3a, #2f8f4e);">A</div>
+        <div class="t-info"><strong>Angela R., 46</strong>Chicago, Illinois</div>
+        <div class="verified">✓ Customer Review</div>
+      </div>
+    </div>
+
+    <div class="testimonial">
+      <div class="testimonial-stars">★★★★★</div>
+      <p>
+        “I like that it is based on moringa instead of a big mystery blend. It fits well with my healthier eating routine.”
+      </p>
+      <div class="testimonial-footer">
+        <div class="t-avatar" style="background: linear-gradient(135deg, #193c2a, #61b86f);">D</div>
+        <div class="t-info"><strong>David M., 52</strong>Austin, Texas</div>
+        <div class="verified">✓ Customer Review</div>
+      </div>
+    </div>
+
+    <div class="testimonial">
+      <div class="testimonial-stars">★★★★★</div>
+      <p>
+        “I was looking for plant-based nutrition without more caffeine. This has become part of my daily wellness routine.”
+      </p>
+      <div class="testimonial-footer">
+        <div class="t-avatar" style="background: linear-gradient(135deg, #71521a, #c9a84c);">L</div>
+        <div class="t-info"><strong>Laura B., 49</strong>Phoenix, Arizona</div>
+        <div class="verified">✓ Customer Review</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cta-mid reveal">
+    <div class="cta-mid-headline">
+      Curious Why Moringa Is Called the <span>“Miracle Tree”?</span>
+    </div>
+    <div class="cta-mid-sub">
+      Review the official ingredient profile, usage guidance, and guarantee details.
+    </div>
+    <a href="https://www.moringa-magic.com/?hopId=d17d12d6-4aad-461b-8333-396a6d5f76c2" class="cta-mid-btn hoplink" target="_blank" rel="nofollow noopener noreferrer">
+      Read More Details
+    </a>
+    <div class="cta-mid-note">
+      Sponsored content · Results vary · Always read the product label
+    </div>
+  </div>
+
+  <h2>Is Moringa Magic Right for You?</h2>
+
+  <p>
+    Moringa Magic may be a good fit if you want a simple plant-based wellness supplement, prefer a clean ingredient profile, and are looking for gradual support for energy, digestion, and overall daily vitality.
+  </p>
+
+  <p>
+    It is not a medicine, not a quick fix, and not a replacement for healthy eating or professional medical care. But for people who want to add more nutrient-dense plant support to their routine, moringa is an interesting option to review.
+  </p>
+
+  <div class="trust-row reveal">
+    <div class="trust-item">
+      <div class="trust-icon">🌿</div>
+      <div class="trust-label">Plant-Based<br>Formula</div>
+    </div>
+
+    <div class="trust-item">
+      <div class="trust-icon">🛡️</div>
+      <div class="trust-label">60-Day<br>Guarantee</div>
+    </div>
+
+    <div class="trust-item">
+      <div class="trust-icon">✅</div>
+      <div class="trust-label">Simple Daily<br>Routine</div>
+    </div>
+
+    <div class="trust-item">
+      <div class="trust-icon">🔒</div>
+      <div class="trust-label">Official<br>Checkout</div>
+    </div>
+  </div>
+
+  <div class="cta-inline reveal">
+    <div class="cta-inline-text">
+      <strong>Read the Official Moringa Magic Details</strong>
+      <span>See the ingredient profile, available packages, usage guidance, and current offer.</span>
+      <span class="cta-inline-badge">✓ 60-Day Money-Back Guarantee</span>
+    </div>
+    <a href="https://www.moringa-magic.com/?hopId=d17d12d6-4aad-461b-8333-396a6d5f76c2" class="cta-inline-btn hoplink" target="_blank" rel="nofollow noopener noreferrer">
+      Read more →
+    </a>
+  </div>
+
+  <div class="disclaimer">
+    <strong>Disclaimer:</strong> This article is sponsored editorial content. Results may vary from person to person. Moringa Magic is a dietary supplement and is not intended to diagnose, treat, cure, or prevent any disease. Statements on this page have not been evaluated by the Food and Drug Administration. This product is not for use by persons under 18. Always consult your physician before starting any new dietary supplement, particularly if you are pregnant, nursing, taking prescription medications, or have a medical condition. Testimonials are examples of user experiences; individual results will vary.
+  </div>
+
+</div>
+
+<footer>
+  © <span id="footer-year"></span> Nova Health Post &nbsp;|&nbsp;
+  <a href="#">Privacy Policy</a> &nbsp;|&nbsp;
+  <a href="#">Terms of Use</a> &nbsp;|&nbsp;
+  <a href="#">Contact</a><br>
+  This site participates in affiliate marketing programs. We may receive compensation when you purchase through links on this page.
+</footer>
+
+<div class="bottom-cta" id="bottomCta">
+  <a href="https://www.moringa-magic.com/?hopId=d17d12d6-4aad-461b-8333-396a6d5f76c2" class="bottom-cta-btn hoplink" target="_blank" rel="nofollow noopener noreferrer">
+    Read more details
+  </a>
+</div>
+
+<script>
+const prog = document.getElementById('progress');
+
+window.addEventListener('scroll', () => {
+  const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+  const percent = maxScroll > 0 ? window.scrollY / maxScroll * 100 : 0;
+  prog.style.width = Math.min(100, percent) + '%';
+});
+
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) e.target.classList.add('in');
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+const now = new Date();
+
+document.getElementById('byline-date').textContent = now.toLocaleDateString('en-US', {
+  weekday: 'long',
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric'
+});
+
+document.getElementById('pub-date').textContent = 'Updated ' + now.toLocaleDateString('en-US', {
+  month: 'long',
+  year: 'numeric'
+});
+
+document.getElementById('footer-year').textContent = now.getFullYear();
+
+const bottomCta = document.getElementById('bottomCta');
+
+const toggleBottomCta = () => {
+  const scrollPosition = window.scrollY + window.innerHeight;
+  const threshold = document.documentElement.scrollHeight - 260;
+  bottomCta.classList.toggle('show', scrollPosition >= threshold);
+};
+
+window.addEventListener('scroll', toggleBottomCta);
+window.addEventListener('resize', toggleBottomCta);
+toggleBottomCta();
+
+document.querySelectorAll('.hoplink').forEach(btn => {
+  btn.addEventListener('click', () => {
+    try {
+      if (window.MgSensorData) window.MgSensorData.push({ event: 'click' });
+      if (typeof __mgid !== 'undefined') __mgid.track('click');
+    } catch(e) {}
+  });
+});
+</script>
+
+</body>
+</html>
