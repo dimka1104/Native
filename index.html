@@ -876,10 +876,8 @@ footer a { color: var(--ink-muted); }
       textEl.classList.add('fade');
     };
 
-    setTimeout(() => {
-      render();
-      toast.classList.add('show');
-    }, 4000);
+    render();
+    toast.classList.add('show');
 
     setInterval(() => {
       showingViewers = !showingViewers;
@@ -923,7 +921,7 @@ footer a { color: var(--ink-muted); }
 
     setTimeout(() => {
       modal.classList.add('show');
-    }, 20000);
+    }, 5000);
 
     closeBtn.addEventListener('click', closeModal);
     proceedBtn.addEventListener('click', closeModal);
